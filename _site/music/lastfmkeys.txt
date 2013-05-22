@@ -1,0 +1,7 @@
+API Key: 3bf6d2566ebe83fba6cf4bb581afe0a9
+Secret: is 22ce79dfa9451c44e70997f14493c0e1
+
+http://www.last.fm/api/account/3bf6d2566ebe83fba6cf4bb581afe0a9?pending=0&new=1
+http://www.last.fm/api
+
+

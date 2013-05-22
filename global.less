@@ -1,0 +1,95 @@
+@font-face
+{
+	font-family: Helvetica-Neue-Ultralight;
+	src: url('../fonts/helvetica_neue_ultralight.ttf')
+}
+
+@viewport{
+	width:device-width;
+}
+
+body{
+/*	background-image: url("../images/concrete_wall.png");
+	background-repeat: repeat; */
+	background-color: #222426;
+	font-family: 'Helvetica-Neue-Ultralight';
+	color:white;
+	width:90%;
+	font-size: 35%;
+	margin: 3em auto 3em auto;
+	min-height: 100%;
+	@media(min-width:624px){
+		font-size:50%;
+	}
+	@media(min-width:768px){
+		font-size: 62.5%;
+	}
+}
+
+a{
+	color:#CECECE;
+	text-decoration: none;
+	transition: color 1s;
+	-webkit-transition: color 1s;
+}
+a:hover{
+	color:white;
+}
+
+#content{
+	margin-bottom: 1em;
+}
+
+
+
+
+/***************HEADER DATA***************/
+#header{
+	width:100%;
+	margin-bottom: .8em;
+}
+
+#navbar{
+	font-size: 3.2em;
+	width:100%;
+	overflow: hidden;
+	text-align: center;
+	border-bottom:.0625em solid #CECECE;
+	margin-bottom: 1em;
+	ul{
+		list-style: none;
+		display: block;
+		width:100%;
+		max-width: 850px;
+		margin: 0 auto;
+		padding: 0;
+		color:white;
+		text-decoration: none;
+		li{
+			display: block;
+			text-align: center;
+			float: left;
+			width: 25%;
+		}
+	}
+}
+/***************HEADER DATA***************/
+
+/***************FOOTER DATA***************/
+#footer{
+	position:relative;
+	width: 100%;
+	overflow: hidden;
+	clear: both;
+	a{
+		float:right;
+		margin: .25em;
+	}
+}
+
+#twitter{
+	padding-top:4px;
+}
+/***************FOOTER DATA***************/
+
+
