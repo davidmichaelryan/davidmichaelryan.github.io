@@ -11,7 +11,9 @@ permalink: index.html
 <body>
 	{% include header.md%}
 	<div id="content">
-		<img id="soon" src="data/images/soon.jpg"></img>
+		<img id="soon" src="/data/images/soon.jpg" data-fullsrc="/data/images/soon1.jpg"></img> 
+		<script>responsiveEnhance(document.getElementById("soon"), 430);</script>
+		<!--<div id="soon"> </div> -->
 	</div>
 	{%include footer.md%}
 </body>

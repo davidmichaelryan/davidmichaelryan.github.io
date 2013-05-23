@@ -1,7 +1,7 @@
 @font-face
 {
 	font-family: Helvetica-Neue-Ultralight;
-	src: url('../fonts/helvetica_neue_ultralight.ttf')
+	src: url('/data/fonts/helvetica_neue_ultralight.ttf')
 }
 
 @viewport{
@@ -14,9 +14,10 @@ body{
 	background-color: #222426;
 	font-family: 'Helvetica-Neue-Ultralight';
 	color:white;
-	width:90%;
+	width:90%; 
+	max-width:1000px;
 	font-size: 35%;
-	margin: 3em auto 3em auto;
+	margin: 3em auto 1em auto;
 	min-height: 100%;
 	@media(min-width:624px){
 		font-size:50%;
@@ -53,7 +54,7 @@ a:hover{
 	font-size: 3.2em;
 	width:100%;
 	overflow: hidden;
-	text-align: center;
+	text-align: left;
 	border-bottom:.0625em solid #CECECE;
 	margin-bottom: 1em;
 	ul{
@@ -76,11 +77,12 @@ a:hover{
 /***************HEADER DATA***************/
 
 /***************FOOTER DATA***************/
-#footer{
+#footer, #footer1{
 	position:relative;
 	width: 100%;
 	overflow: hidden;
 	clear: both;
+	margin-bottom: 20px;
 	a{
 		float:right;
 		margin: .25em;
@@ -95,5 +97,25 @@ a:hover{
 	padding-top:4px;
 }
 /***************FOOTER DATA***************/
+
+.sprite{
+	background:none no-repeat left center;
+	background-image:url('/data/images/button-sprite.png');
+	height:32px;
+	width:30px;
+}
+
+#twtr{
+	background-position: -106px 0px;
+}
+#spot{
+	background-position:  -70px 0px;
+}
+#in{
+	background-position:  -36px 0px;
+}
+#ghub{
+	background-position:  0px 0px;
+}
 
 
