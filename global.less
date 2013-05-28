@@ -1,7 +1,7 @@
 @font-face
 {
-	font-family: "Source Sans Pro";
-	src: url('/data/fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf')
+	font-family: "Montserrat";
+	src: url('/data/fonts/Montserrat-Regular.ttf')
 }
 
 @viewport{
@@ -9,22 +9,22 @@
 }
 
 body{
-	background-color: #222426;
-	font-family: 'Source Sans Pro';
-	color:white;
+	background-color: rgb(245, 245, 246);
+	font-family: 'Montserrat';
+	color:black;
 	font-size: 62.5%;
 	margin: 3em auto 1em auto;
 	min-height: 100%;
 }
 
 a{
-	color:#CECECE;
+	color:black;
 	text-decoration: none;
 	transition: color 0.5s;
 	-webkit-transition: color 0.5s;
 }
 a:hover{
-	color:white;
+	text-decoration: underline;
 }
 
 #content{
@@ -54,7 +54,7 @@ p{
 
 #navbar{
 	overflow: hidden;
-	border-bottom:0.125em solid #CECECE;
+	border-bottom:0.125em solid black;
 	font-size: 1.8em;
 	padding-bottom: 0.125em;
 	ul{
@@ -67,9 +67,13 @@ p{
 			font-size: 1.3333em;
 			margin:0.5em;
 			@media(min-width: 541px){
-				margin: 0 0 0 0.5em;
-				font-size: 1em;
+				margin: 0.38888em 0 0 0.5em;
+				font-size: 1.11111em;
 				display: inline-block;
+			}
+			@media(min-width: 720px){
+				font-size: 1.5555em;
+				margin: 0 0 0 0.5em;
 			}
 		}
 		@media(min-width:541px){
@@ -108,7 +112,7 @@ p{
 /***************FOOTER DATA***************/
 #footer, #footer1{
 	position:relative;
-	width: 100%;
+	width: 90%;
 	max-width: 960px;
 	overflow: hidden;
 	clear: both;
