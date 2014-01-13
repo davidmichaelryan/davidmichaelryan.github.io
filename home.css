@@ -30,12 +30,11 @@ body, html {
 #menuThing{
 	color:white;
 	width:100%;
-	padding-top: 30px;
+	padding-top: 10px;
 	text-align: center;
   width: 100%;
   text-shadow: 1px 1px 1px #000;
   background-color: rgba(0,0,0,0.15);
-
 }
 
 @media(min-width: 560px){
