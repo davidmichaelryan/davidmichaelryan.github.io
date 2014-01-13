@@ -19,24 +19,18 @@ body{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-<<<<<<< HEAD
   margin: 0;
 }
 
 body, html {
-=======
->>>>>>> 402309efe208d52ebd6fdaf4cd8e45b1d2c49a6a
+
   height: 100%;
 }
 
 #menuThing{
 	color:white;
-<<<<<<< HEAD
-=======
-	min-height: 100%;
 	width:100%;
 	padding-top: 30px;
->>>>>>> 402309efe208d52ebd6fdaf4cd8e45b1d2c49a6a
 	text-align: center;
   width: 100%;
   text-shadow: 1px 1px 1px #000;
