@@ -8,35 +8,45 @@
 }
 
 html{
-	min-height:100%;
 	position:relative;
 	font-family: 'FiraSansOTLight', Times, Arial;
+  margin: 0 auto;
 }
 
 body{ 
-  background: url('my face.jpg') no-repeat center center fixed; 
+  background: url('my face 2.jpg') no-repeat left center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100%;
+  margin: 0;
+}
 
+body, html {
+  height: 100%;
 }
 
 #menuThing{
-	background-color: rgba(0,0,0,0.15);
 	color:white;
-	min-height: 100%;
-	width:39%;
-	padding-top: 30px;
 	text-align: center;
+  width: 100%;
+  text-shadow: 1px 1px 1px #000;
+  background-color: rgba(0,0,0,0.15);
+
+}
+
+@media(min-width: 560px){
+  #menuThing{
+    min-height: 100%;
+    width:39%;
     position:absolute;
     top:0;
     bottom:0;
-    left:0;
     right:0;
     overflow:hidden;
-    z-index:-1
+    z-index:-1;
+    padding-top: 30px;
+  }
 }
 
 @media (min-width: 720px){
@@ -46,10 +56,102 @@ body{
   }
 }
 
+@media(min-width: 1000px){
+  body{
+    background: rgb(4, 19, 38) url('my face 2.jpg') no-repeat left center fixed; 
+    -webkit-background-size: 1000px;
+    -moz-background-size: 1000px;
+    -o-background-size: 1000px;
+    background-size: 1000px;
+    position: relative;
+  }
+  #menuThing{
+      background-color: rgb(4, 19, 38);
+      margin-left: 70%;
+      position: relative;
+      display: block;
+      max-width: none;
+  }
+}
+
+#nowait{
+  display: none;
+  color: white;
+  font-size: 60px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+   left:0;
+    bottom:0;
+    right:0;
+    overflow:hidden;
+  margin-top: 50px;
+}
+
+@media(min-width: 1700px){
+  #nowait{
+    display: block;
+  }
+}
+
 #menuThing > h1{
 		color:white;
 }
 
-#name{
-	text-decoration: underline;
+a{
+  text-decoration: none;
+  color: white;
+}
+
+h1{
+  padding-top: 0.3em;
+  margin: 0 auto 0.3em auto; 
+}
+
+p{
+  padding-top: 0.3em;
+  margin: 0 auto 0.6em auto;  
+}
+
+#smedia{
+  width: 157px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  clear: both;
+      margin-left: auto;
+    margin-right: auto;
+}
+
+#smedia > a{
+    float:left;
+    margin: .25em;
+}
+
+#smedia > a img{
+      width:30px;
+      height:auto;
+    }
+
+.sprite{
+  background:none no-repeat left center;
+  background-image:url('button-sprite.png');
+  height:32px;
+  width:30px;
+  padding-bottom: 10px;
+}
+
+#smedia > #twtr{
+  background-position: -106px 0px;
+}
+#smedia > #rdio{
+  background-position:  -69px 0px;
+  margin-left: 0;
+  width: 35px;
+}
+#in{
+  background-position:  -36px 0px;
+}
+#ghub{
+  background-position:  0px 0px;
 }
