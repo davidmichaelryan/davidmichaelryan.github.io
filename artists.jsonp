@@ -1,0 +1,5 @@
+jsonstr = [{
+	"artistName": "Beyonce",
+	"image": "/icons/beyonce.png", 
+	"times": "12:00pm-1:30pm"
+}];
