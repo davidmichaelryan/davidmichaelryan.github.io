@@ -2,4 +2,12 @@ jsonstr = [{
 	"artistName": "Beyonce",
 	"image": "beyonce.png", 
 	"times": "12:00pm-1:30pm"
-}];
+},
+{
+	"artistName": "JAY Z",
+	"image": "jayz.png", 
+	"times": "2:00pm-3:30pm"
+
+}
+
+];
