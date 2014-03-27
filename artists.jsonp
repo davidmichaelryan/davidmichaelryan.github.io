@@ -5,7 +5,7 @@ jsonstr = [{
 },
 {
 	"artistName": "JAY Z",
-	"image": "my face.jpg", 
+	"image": "my%20face.jpg", 
 	"times": "2:00pm-3:30pm"
 
 }
