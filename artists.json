@@ -1,33 +1,33 @@
 {
-	{
+	"artist1": {
 		"artistName": "Beyonce",
 		"image": "beyonce.png", 
 		"times": "12:00pm-1:30pm",
 		"notify": "",
 		"version": "1.0"
 	},
-	{
+	"artist2": {
 		"artistName": "JAY Z",
 		"image": "beyonce.png", 
 		"times": "2:00pm-3:30pm",
 		"notify": "",
 		"version": "1.0"
 	},
-	{
+	"artist3": {
 		"artistName": "Jay Electronica",
 		"image": "beyonce.png", 
 		"times": "4:00pm-5:30pm",
 		"notify": "",
 		"version": "1.0"
 	},
-	{
+	"artist4": {
 		"artistName": "Action Bronson",
 		"image": "beyonce.png", 
 		"times": "6:00pm-7:30pm",
 		"notify": "",
 		"version": "1.0"
 	},
-	{
+	"artist5": {
 		"artistName": "Kanye West",
 		"image": "beyonce.png", 
 		"times": "8:00pm-10:00pm",
