@@ -7,7 +7,7 @@ var jsonObj = [{
 	},
 	{
 		"artistName": "JAY Z",
-		"image": "my face2.jpg", 
+		"image": "my face 2.jpg", 
 		"times": "2:00pm-3:30pm",
 		"notify": ""
 	},
