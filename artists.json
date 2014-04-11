@@ -12,12 +12,6 @@ var jsonObj = [{
 		"notify": ""
 	},
 	{
-		"artistName": "Jay Electronica",
-		"image": "beyonce.png", 
-		"times": "4:00pm-5:30pm",
-		"notify": ""
-	},
-	{
 		"artistName": "Action Bronson",
 		"image": "beyonce.png", 
 		"times": "6:00pm-7:30pm",
