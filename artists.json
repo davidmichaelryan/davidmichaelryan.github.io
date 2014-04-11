@@ -4,23 +4,5 @@ var jsonObj = [{
 		"image": "beyonce.png", 
 		"times": "12:00pm-1:30pm",
 		"notify": ""
-	},
-	{
-		"artistName": "JAY Z",
-		"image": "my face 2.jpg", 
-		"times": "2:00pm-3:30pm",
-		"notify": ""
-	},
-	{
-		"artistName": "Action Bronson",
-		"image": "beyonce.png", 
-		"times": "6:00pm-7:30pm",
-		"notify": "",
-	},
-	{
-		"artistName": "Kanye West",
-		"image": "beyonce.png", 
-		"times": "8:00pm-10:00pm",
-		"notify": ""
 	}
 ]
