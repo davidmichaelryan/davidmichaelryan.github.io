@@ -1,5 +1,0 @@
-jsonstr = [{
-	"artistName": "Beyonce",
-	"image": "beyonce.png", 
-	"times": "12:00pm-1:30pm"
-}];
