@@ -1,7 +1,6 @@
-var version = 5.0
 var jsonObj = [{
-		"artistName": "Beyonce",
-		"image": "beyonce.png", 
+		"artistName": "Chance the Rapper",
+		"image": "chance.gif", 
 		"times": "12:00pm-1:30pm",
 		"notify": ""
 	},
@@ -11,7 +10,6 @@ var jsonObj = [{
 		"times": "2:00pm-3:30pm",
 		"notify": ""
 	},
-
 	{
 		"artistName": "Action Bronson",
 		"image": "beyonce.png", 
