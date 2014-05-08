@@ -1,7 +1,7 @@
 var jsonObj = [{
 		"artistName": "Chance the Rapper",
 		"image": "chance.gif", 
-		"times": "12:00pm-1:30pm",
+		"times": "",
 		"notify": ""
 	}
 ]
