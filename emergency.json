@@ -1,5 +1,5 @@
 var jsonObj = {
         "emergency": "true",
         "version": "1.0",
-        "info": "Due to inclement weather, we have to evacuate the Lakefill. We expect to reopen the event once the weather has cleared, hopefull around 2:30pm. For more information, go to http://dilloday.com"
+        "info": "Due to inclement weather, we have to evacuate the Lakefill. We expect to reopen the event once the weather has cleared."
     }
