@@ -1,4 +1,4 @@
 var jsonObj = [{
-        "cde": "<p style='color:blue'>THIS IS A TEST</p>"
+        "cde": "<p style=''>Check back here for important policies as we get closer to Dillo Day!</p>"
     }
 ]
