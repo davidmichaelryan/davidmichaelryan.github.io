@@ -3,5 +3,12 @@ var jsonObj = [{
 		"image": "chance.png", 
 		"times": "4:00pm-5:00pm",
 		"notify": ""
-	}
+	},
+            {
+                "artistName": "2 Chainz",
+                "image": "2chainz.jpg", 
+                "times": "7:30pm-9:00pm",
+                "notify": ""
+            }
+
 ]
