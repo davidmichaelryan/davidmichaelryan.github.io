@@ -7,7 +7,7 @@ var jsonObj = [{
             {
                 "artistName": "2 Chainz",
                 "image": "2chainz.jpg", 
-                "times": "7:30pm-9:00pm",
+                "times": "8:30pm-10:00pm",
                 "notify": ""
             }
 
