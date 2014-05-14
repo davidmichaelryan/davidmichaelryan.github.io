@@ -117,7 +117,8 @@ h1{
 
 p{
   padding-top: 0.3em;
-  margin: 0 auto 0.6em auto;  
+  margin: 0 auto 0.4em auto;  
+  font-size: 1.5em;
 }
 
 #smedia{
@@ -152,7 +153,7 @@ p{
   background-position: -106px 0px;
 }
 #smedia > #rdio{
-  background-position:  -69px 0px;
+  background-position:  -68px 1px;
   margin-left: 0;
   width: 35px;
 }
