@@ -37,6 +37,14 @@ body, html {
   background-color: rgba(0,0,0,0.15);
 }
 
+@media(max-width:559px){
+  #notmysignature{
+    position: absolute;
+    bottom:0;
+    width:100%;
+  }
+}
+
 @media(min-width: 560px){
   #menuThing{
     min-height: 100%;
