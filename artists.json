@@ -1,6 +1,6 @@
 var jsonObj = [
            {
-                "artistName": "OK GO",
+                "artistName": "OK Go",
                 "image": "okgo.jpg", 
                 "times": "1:30-2:30pm",
                 "notify": ""
