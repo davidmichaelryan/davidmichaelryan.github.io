@@ -6,11 +6,11 @@ var jsonObj = [
                 "notify": ""
             },
             {
-        "artistName": "Chance the Rapper",
-        "image": "chance.png", 
-        "times": "3:00-4:00pm",
-        "notify": ""
-    },
+		"artistName": "Chance the Rapper",
+		"image": "chance.png", 
+		"times": "3:00-4:00pm",
+		"notify": ""
+	},
             {
                 "artistName": "Cults",
                 "image": "cults.jpg", 
