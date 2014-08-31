@@ -16,13 +16,24 @@ h1, h2, h3, h4, h5
 
 #menu
   margin: 0 auto 40px auto
-
   h1
     display: inline-block
     margin: 0
+    float: left
+  @media screen and (max-width: 400px)
+    h1
+      display: block
+      float: none
+      text-align: center 
+    #smedia
+      float: none
+      margin: 0 auto
+      width: 160px
+
 
 #smedia
   float: right
+  overflow: hidden
 
 a
   animation: fadein 3s
