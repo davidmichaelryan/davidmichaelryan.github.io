@@ -7,36 +7,45 @@ html
 body 
   color: white
   font: 112.5% $sans-serif
-  margin: 20px auto
+  margin: 30px auto
   padding: 0 20px
+  @media screen and (min-width: 401px)
+    margin: 40px auto
 
 h1, h2, h3, h4, h5 
   font-family: $serif
   color: white
 
 #menu
-  margin: 0 auto 40px auto
+  margin: 0 auto 20px auto 
   h1
-    display: inline-block
+    display: block
+    float: none
     margin: 0
-    float: left
-  @media screen and (max-width: 400px)
+    text-align: center 
+    a 
+      color: white
+      text-decoration: none
+
+  #smedia
+    float: none
+    margin: 10px auto 0 auto
+    width: 160px
+  @media screen and (min-width: 401px)
+    margin: 0 auto 40px auto
     h1
-      display: block
-      float: none
-      text-align: center 
+      display: inline-block
+      float: left
     #smedia
-      float: none
-      margin: 0 auto
-      width: 160px
-
-
-#smedia
-  float: right
-  overflow: hidden
+      float: right
+      overflow: hidden
+    .sprite
+      opacity: 0.75
+      transition: opacity 0.25s
+      &:hover
+        opacity: 1
 
 a
-  animation: fadein 3s
   color: #1485CC
 
 .sprite
@@ -45,6 +54,7 @@ a
   height: 32px
   margin: 4px
   width: 30px
+
 
 #twitter 
   background-position: -106px 0px
@@ -60,15 +70,6 @@ a
 #github 
   background-position:  0px 0px
  
-@keyframes fadein {
-  from {
-    opacity: 0 
-  }
-  to {
-    opacity: 1 
-  }
-}
-
 .circle-img 
   border-radius: 50%
   overflow: hidden

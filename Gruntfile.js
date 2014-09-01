@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             js: {
                 src: [
                     'js/libs/*.js', // All JS in the libs folder
-                    'js/global.js'  // This specific file
+                    'js/*.js'
                 ],
                 dest: 'build/production.js',
             },
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'images/',
-                    src: ['**/*.{png,jpg,gif}'],
+                    src: ['**/*.{png,jpg,gif}', 'images/*.{png,jpg,gif}'],
                     dest: 'build/images'
                 }]
             }
@@ -37,8 +37,8 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['css/*.styl'],
-                tasks: ['stylus'],
+                files: ['css/*.styl', 'js/*.js'],
+                tasks: ['stylus', 'concat', 'uglify'],
                 options: {
                     spawn: false,
                 },
