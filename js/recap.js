@@ -66,9 +66,9 @@ $('#prev').click(function(){
 });
 
 $('.moment').click(function(){
-  $('.active').toggleClass('active');
+  $('.moment.active').removeClass('active');
+  $(this).addClass('active');
   var newID = $(this).attr('id');
   $('#momentID').css('background-image', 'url(../images/recap/'+newID+'.jpg)');
   $('#momentID').css('background-image', 'url(../images/recap/'+newID+'.jpg)');
-  $(this).toggleClass('active');
 })
