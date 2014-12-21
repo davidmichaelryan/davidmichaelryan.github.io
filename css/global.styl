@@ -49,6 +49,9 @@ h1, h2, h3, h4, h5
 a
   color: #1485CC
 
+ul 
+  list-style: none;
+
 .sprite
   background: url('../images/button-sprite.png') no-repeat left center
   float: left
@@ -73,11 +76,18 @@ a
  
 .circle-img 
   border-radius: 50%
-  overflow: hidden
+  margin: 0 auto
   max-height: 250px
   max-width: 250px
-  margin: 0 auto
+  overflow: hidden
+  
+  -webkit-transition: border-radius 500ms cubic-bezier(0.4,-1.5,.6,2.75)
+  -moz-transition: border-radius 500ms cubic-bezier(0.4,-1.5,.6,2.75)
+  -o-transition: border-radius 500ms cubic-bezier(0.4,-1.5,.6,2.75)
+  -ms-transition: border-radius 500ms cubic-bezier(0.4,-1.5,.6,2.75)
+  transition: border-radius 500ms cubic-bezier(0.4,-1.5,.6,2.75)
 
-  img 
+  img
     width: 100%
     height: 100%
+  
