@@ -16,12 +16,18 @@ $font-color = rgb(33,33,33)
 html 
   background-color: $background-color
   color: $font-color
-
-html 
   box-sizing: border-box
   
 *, *:before, *:after 
   box-sizing: inherit
+
+::selection {
+  background: #FF9933
+  
+}
+::-moz-selection {
+  background: #FF9933
+}
 
 body 
   color: rgb(33,33,33)
