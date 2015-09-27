@@ -1,13 +1,27 @@
 {
-  "name": "personal-website",
-  "version": "0.1.0",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-concat": "^0.5.0",
-    "grunt-contrib-imagemin": "^0.8.1",
-    "grunt-contrib-stylus": "^0.19.0",
-    "grunt-contrib-uglify": "^0.5.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-contrib-copy": "*"
-  }
+  "name": "davidmichaelryan.com",
+  "version": "1.0.0",
+  "description": "David Ryan'sPersonal Website",
+  "main": "index.coffee",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/davidmichaelryan/davidmichaelryan.github.io"
+  },
+  "dependencies": {
+    "body-parser": "*", 
+    "coffee-script": "*",
+    "dotenv": "*",
+    "grunt": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-contrib-watch": "*",
+  
+    "hogan-express": "*",
+    "express": "*",
+    "morgan": "*",
+    "underscore": "*"
+  },
+  "author": "David Ryan",
+  "license": "ISC",
+  "homepage": "davidmichaelryan.com"
 }
