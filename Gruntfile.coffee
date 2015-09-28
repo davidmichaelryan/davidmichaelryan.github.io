@@ -12,6 +12,8 @@ module.exports = (grunt) ->
         ]
     stylus:
       compile:
+        options:
+          "include css": true
         files: [
           expand: true
           cwd: 'public/stylus'

@@ -15,7 +15,10 @@
     "grunt-contrib-coffee": "*",
     "grunt-contrib-stylus": "*",
     "grunt-contrib-watch": "*",
-  
+    
+    "request": "*",
+    "cheerio": "*",
+    
     "hogan-express": "*",
     "express": "*",
     "morgan": "*",
