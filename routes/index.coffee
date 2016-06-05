@@ -1,6 +1,7 @@
-{extend} = require 'underscore'
+{assign} = require 'lodash'
 request = require "request"
 cheerio = require 'cheerio'
+recipesController = require '../modules/recipes/controller'
 
 require('dotenv').load();
 
@@ -16,7 +17,7 @@ module.exports = (app) ->
     return
 
   app.get "/", (req, res) ->
-    index_partials = extend {}, base_partials, {work: "work"}
+    index_partials = assign {}, base_partials, {work: "work"}
     res.render "index",
       partials: index_partials
   
@@ -24,12 +25,13 @@ module.exports = (app) ->
     res.locals =
       includeJs:
         jquery: true
+        gifsJs: true
 
-    gifs_partials = extend {}, base_partials, {gifs: "gifs"}
+    gifs_partials = assign {}, base_partials, {gifs: "gifs"}
     res.render "index",
       partials: gifs_partials
-  
-  app.get "/getgifs", (req, res) ->
+
+  app.get "/getgifs", (req, res) -> ## IN PROGRESS
     dropboxUrl = process.env.DROPBOX_URL
     gifUrl = process.env.DROPBOX_GIF_URL
     request dropboxUrl, (error, response, body) ->
@@ -52,3 +54,12 @@ module.exports = (app) ->
           gifs: gifs
 
         res.render "gif_list"
+
+  app.get "/recipes", (req, res) ->
+    recipesController.main req, res
+
+  app.post "/recipes", (req, res) ->
+    recipesController.submit req, res
+
+  app.get '/recipes-linter', (req, res) ->
+    recipesController.lint req, res

@@ -1,0 +1,42 @@
+<section id="recipes">
+  <div class="row">
+    <h1>Recipes</h1>
+    <div class="container">
+      <ul>
+        {{# recipeList }}
+          <li>
+            {{# title }}<h3>{{# url }}<a href="{{ url }}">{{/ url }}{{ title }}{{# url }}</a>{{/ url }}</h3>{{/ title }}
+            {{# image }}<img src="{{ image }}"/>{{/ image }}
+            <p>This recipe has{{^ beenTried }} not{{/ beenTried }} been made{{^ beenTried }} yet{{/ beenTried }}</p>
+          </li>
+        {{/ recipeList }}
+      </ul>
+    </div>
+    {{# inputtingRecipes }}
+      <div class="container">
+          <h2>Submit some recipes:</h2>         
+            <table id="new-recipes-table">
+               <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Url</th>
+                    <th>Image</th>
+                    <th>Have you made it yet?</th>
+                  </tr>             
+               </thead>
+               <tbody>
+                {{# newRecipeList }}
+                  <tr>
+                    <td><input type="text" name="title" value="{{ title }}"/></td>
+                    <td><input type="text" name="url" value="{{ url }}"/></td>
+                    <td><input type="text" name="image" value="{{ image }}"/></td>
+                    <td><input type="checkbox" name="beentried" {{# beenTried }}value="1"{{/ beenTried }}></td>              
+                  </tr>
+                {{/ newRecipeList }}
+              </tbody>
+            </table>
+            <div id="submit-new-recipes"><button>SUBMIT</button></div>
+        </div>
+      {{/ inputtingRecipes }}
+  </div>
+</section>

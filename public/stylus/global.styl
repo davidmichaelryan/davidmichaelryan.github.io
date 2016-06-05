@@ -135,6 +135,7 @@ header.row
   margin: 0px auto
   overflow: hidden
   padding: 30px 0 0 0
+  position: relative
   text-align: center
 
   h1
@@ -171,7 +172,34 @@ header.row
       
     h1
       display: block
-
+    
+  .face-mask
+    position: absolute
+    left: 50%
+    top: 62px
+    margin-left: -29px
+    width: 51px
+    height: auto
+    fill: #fbecdf
+    
+    &:hover
+      -webkit-animation: avatarzomg 0.4s infinite
+      -moz-animation: avatarzomg 0.4s infinite
+      animation: avatarzomg 0.4s infinite
+  
+    @media screen and (min-width: 641px)
+      -moz-transform: scaleX(-1)
+      -o-transform: scaleX(-1)
+      -webkit-transform: scaleX(-1)
+      transform: scaleX(-1)
+      filter: FlipH
+      -ms-filter: "FlipH"
+      
+      left: initial
+      top: 55px;
+      width: 44px;
+      right: 45px;
+      
 
 footer
   width: 100%
@@ -200,3 +228,28 @@ footer
     right: 0
     bottom: 0
     left:0
+
+@keyframes avatarzomg
+  0%, 100%
+    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg)
+    filter: invert(0) saturate(100%) hue-rotate(0deg)
+  25%
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg)
+    filter: invert(10%) saturate(500%) hue-rotate(180deg)
+  50%
+    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg)
+    filter: invert(10%) saturate(300%) hue-rotate(300deg)
+  75%
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg)
+    filter: invert(10%) saturate(500%) hue-rotate(90deg)
+
+
+#new-recipes-table
+  tr
+    td
+      input
+        width: 98%
+
+      &:last-child
+        text-align: right
+        width: 10%

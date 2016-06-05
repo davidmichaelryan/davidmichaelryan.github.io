@@ -8,6 +8,7 @@
     "url": "http://github.com/davidmichaelryan/davidmichaelryan.github.io"
   },
   "dependencies": {
+    "async": "*",
     "body-parser": "*", 
     "coffee-script": "*",
     "dotenv": "*",
@@ -22,7 +23,8 @@
     "hogan-express": "*",
     "express": "*",
     "morgan": "*",
-    "underscore": "*"
+    "mongoose": "*",
+    "lodash": "*"
   },
   "author": "David Ryan",
   "license": "ISC",

@@ -2,10 +2,14 @@ express = require 'express'
 path = require 'path'
 bodyParser = require 'body-parser'
 morgan = require 'morgan'
+mongoose = require 'mongoose'
+
 require('dotenv').load();
 
 app = express()
 port = process.env.PORT || 5000
+mongoose.connect process.env.MONGOLAB_URI
+
 
 app.use express.static path.join __dirname, 'build'
 app.set 'views', path.join __dirname, 'templates'
