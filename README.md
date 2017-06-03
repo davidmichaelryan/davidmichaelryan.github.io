@@ -4,6 +4,6 @@
 
 ### Setup
 - Node.js app running on Heroku
-- Using coffeescript, stylus, mustache, grunt
+- Using  stylus, mustache
 
 

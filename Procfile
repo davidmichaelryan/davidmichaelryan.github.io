@@ -1,1 +1,1 @@
-web: ./node_modules/.bin/coffee index.coffee
+web: npm run start

@@ -1,30 +1,29 @@
 {
   "name": "davidmichaelryan.com",
   "version": "1.0.0",
-  "description": "David Ryan'sPersonal Website",
-  "main": "index.coffee",
+  "description": "David Ryan's Personal Website",
+  "main": "dist",
   "repository": {
     "type": "git",
-    "url": "http://github.com/davidmichaelryan/davidmichaelryan.github.io"
+    "url": "http://github.com/davidmichaelryan/foodmap"
   },
   "dependencies": {
-    "async": "*",
-    "body-parser": "*", 
-    "coffee-script": "*",
+    "body-parser": "*",
     "dotenv": "*",
-    "grunt": "*",
-    "grunt-contrib-coffee": "*",
-    "grunt-contrib-stylus": "*",
-    "grunt-contrib-watch": "*",
-    
-    "request": "*",
-    "cheerio": "*",
-    
-    "hogan-express": "*",
     "express": "*",
+    "hogan-express": "*",
+    "lodash": "*",
     "morgan": "*",
-    "mongoose": "*",
-    "lodash": "*"
+    "request": "*"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-groupon": "^4.0.0",
+    "eslint-plugin-import": "^2.3.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "lint": "eslint index.js routes public/scripts modules"
   },
   "author": "David Ryan",
   "license": "ISC",

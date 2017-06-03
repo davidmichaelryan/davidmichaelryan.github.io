@@ -1,6 +1,5 @@
 @import grid
 @import linkUnderlines
-@import "remodal.css"
 
 $serif = 'Gentium Book Basic', serif
 $sans-serif = 'Open Sans', sans-serif
@@ -61,7 +60,7 @@ li
 div.row
   max-width: 840px
 
-#work, #gifs
+#work
   padding: 40px 20px
   background-color: $jcrew-light-blue
   color: $background-color
@@ -83,52 +82,6 @@ div.row
       
     &:nth-child(n+2)
       padding-left: 10px  
-
-#gifs
-  h1
-    text-align: center
-  .row > h1
-    font-size: 128px
-    margin: 0
-    text-align: left
-  a
-    cursor: pointer
-  ul
-    overflow: hidden
-  li
-    float: left
-    display: inline-block
-    margin-bottom: 20px
-    width: 100%
-    
-    @media screen and (min-width: 610px)
-      width: 50%
-    @media screen and (min-width: 870px)
-      width: 33.3333%
-
-.remodal    
-  background-color: $jcrew-light-blue
-  color: $background-color
-  
-  button.remodal-close
-    color: $background-color
-    
-    &:before
-      font-size: 48px
-      top: 4px 
-      left: 4px
-  
-  img
-    margin: 0 auto
-    display: block
-    max-width: 100%
-
-#loading-gif-list
-  height: 350px
-  img
-    display: block
-    margin: 0 auto
-    max-width: 100%
 
 header.row
   max-width: 850px
@@ -242,14 +195,3 @@ footer
   75%
     -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg)
     filter: invert(10%) saturate(500%) hue-rotate(90deg)
-
-
-#new-recipes-table
-  tr
-    td
-      input
-        width: 98%
-
-      &:last-child
-        text-align: right
-        width: 10%
