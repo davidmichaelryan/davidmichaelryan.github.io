@@ -545,3 +545,25 @@ footer h3 {
 }
 
 /* https://eager.io/blog/smarter-link-underlines/ */
+
+#map {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 200px;
+}
+input,
+label {
+  display: block;
+}
+label {
+  margin-right: 30px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+label input {
+  display: inline;
+  margin-left: 10px;
+}
+form {
+  margin-bottom: 20px;
+}

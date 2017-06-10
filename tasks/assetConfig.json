@@ -1,0 +1,13 @@
+{
+    "js": { 
+        "foodmap": {
+            "foodmap": [
+                "confirmArrival",
+                "index"
+            ],
+            "flavortown": [
+                "flavortown"
+            ]
+        }
+    }
+}

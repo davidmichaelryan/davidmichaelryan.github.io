@@ -1,0 +1,15 @@
+script(
+    src='js/foodmap.js'
+)
+script(
+    src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCvRWaNGBayIc2C59blfpri7Cq8W4cTwxE'
+    async
+    defer
+    onload="initMap()"
+)
+script(
+    async
+    defer
+    src="js/flavortown.js"
+    onload="confirmArrival('flavortown')"
+)

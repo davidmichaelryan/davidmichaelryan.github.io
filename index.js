@@ -1,25 +1,25 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-const morgan = require('morgan');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 const dotenv = require('dotenv');
-const routes = require('./routes');
-const hoganExpress = require('hogan-express');
+const routes = require('./core/routes.js');
 
 dotenv.load();
 
 const app = express();
 
-app.use(morgan('combined'));
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(logger('dev'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 
-app.set('views', path.join(__dirname, 'templates'));
-app.set('view engine', 'mustache');
-app.enable('view cache');
-app.engine('mustache', hoganExpress);
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.set('views', __dirname);
+app.set('view engine', 'pug');
 
 routes(app);
 
