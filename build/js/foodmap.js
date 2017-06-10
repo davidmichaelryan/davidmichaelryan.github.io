@@ -7,6 +7,49 @@ function confirmArrival(asset) {
   return asyncScripts;
 }
 
+var haversine = (function () {
+
+  // convert to radians
+  var toRad = function (num) {
+    return num * Math.PI / 180
+  }
+
+  return function haversine (start, end, options) {
+    options   = options || {}
+
+    var radii = {
+      km:    6371,
+      mile:  3960,
+      meter: 6371000,
+      nmi:   3440
+    }
+
+    var R = options.unit in radii
+      ? radii[options.unit]
+      : radii.km
+
+    var dLat = toRad(end.latitude - start.latitude)
+    var dLon = toRad(end.longitude - start.longitude)
+    var lat1 = toRad(start.latitude)
+    var lat2 = toRad(end.latitude)
+
+    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+            Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2)
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
+
+    if (options.threshold) {
+      return options.threshold > (R * c)
+    }
+
+    return R * c
+  }
+
+})()
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = haversine
+}
+
 let FoodMap;
 
 function _initMapForm() {
@@ -49,8 +92,6 @@ function getInfoFromForm() {
 }
 
 function updateMap() {
-  const FoodMap = window.FoodMap;
-
   FoodMap.markers.map((marker) => {
     marker.setMap(null);
   });
@@ -63,7 +104,7 @@ function updateMap() {
 
   formData = getInfoFromForm();
 
-  if (!formData.startingLocation.length || formData.endingLocation.length) {
+  if (!formData.startingLocation.length || !formData.endingLocation.length) {
     return;
   }
 
@@ -89,7 +130,6 @@ function updateMap() {
 }
 
 function addLocationToMap(location) {
-  const FoodMap = window.FoodMap;
   if ((typeof FoodMap === undefined)) {
     return;
   }
@@ -127,7 +167,6 @@ function addLocationToMap(location) {
 }
 
 function makeDirections(startingLocation, endingLocation, callback) {
-  const FoodMap = window.FoodMap;
   if ((typeof FoodMap === undefined)) {
     return;
   }
@@ -196,7 +235,6 @@ function searchForStops(mapResponse) {
 }
 
 function addAllLocations() {
-  FoodMap = window.FoodMap;
   for (let i = 0; i < flavortown.length; i++) {
     const location = flavortown[i];
     const markerPosition = {

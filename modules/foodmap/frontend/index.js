@@ -40,8 +40,6 @@ function getInfoFromForm() {
 }
 
 function updateMap() {
-  const FoodMap = window.FoodMap;
-
   FoodMap.markers.map((marker) => {
     marker.setMap(null);
   });
@@ -54,7 +52,7 @@ function updateMap() {
 
   formData = getInfoFromForm();
 
-  if (!formData.startingLocation.length || formData.endingLocation.length) {
+  if (!formData.startingLocation.length || !formData.endingLocation.length) {
     return;
   }
 
@@ -80,7 +78,6 @@ function updateMap() {
 }
 
 function addLocationToMap(location) {
-  const FoodMap = window.FoodMap;
   if ((typeof FoodMap === undefined)) {
     return;
   }
@@ -118,7 +115,6 @@ function addLocationToMap(location) {
 }
 
 function makeDirections(startingLocation, endingLocation, callback) {
-  const FoodMap = window.FoodMap;
   if ((typeof FoodMap === undefined)) {
     return;
   }
@@ -187,7 +183,6 @@ function searchForStops(mapResponse) {
 }
 
 function addAllLocations() {
-  FoodMap = window.FoodMap;
   for (let i = 0; i < flavortown.length; i++) {
     const location = flavortown[i];
     const markerPosition = {

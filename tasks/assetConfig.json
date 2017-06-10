@@ -3,6 +3,7 @@
         "foodmap": {
             "foodmap": [
                 "confirmArrival",
+                "haversine",
                 "index"
             ],
             "flavortown": [

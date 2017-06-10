@@ -5,19 +5,20 @@ form#map-form(
     action="#" 
     onsubmit!="updateMap(); return false;"
 )
-label
-    | Start location
+    label
+        | Start location
 
-    input(
-        type='text'
-    )
-label
-    | End location
+        input(
+            type='text'
+        )
+    label
+        | End location
 
-    input(
-        type='text'
+        input(
+            type='text'
+        )
+    input( 
+        type='submit'
     )
-input( 
-    type='submit'
-)
+
 div#map

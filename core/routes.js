@@ -11,6 +11,7 @@ const routes = (app, basePartials) => {
     [
         require('../modules/homepage/routes'),
         require('../modules/foodmap/routes'),
+        require('../modules/random_pocket/routes'),
     ].map((initRoute) => initRoute(app));
 };
 
