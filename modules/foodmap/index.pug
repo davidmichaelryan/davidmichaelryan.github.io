@@ -1,5 +1,12 @@
 extends ../../core/layout.pug
 
+append head
+    append css
+        include css.pug
+
+block prepend logo
+    - var hideLogo = true
+
 block content
     include content.pug
 

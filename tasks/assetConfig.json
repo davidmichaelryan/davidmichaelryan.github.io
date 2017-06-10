@@ -9,5 +9,18 @@
                 "flavortown"
             ]
         }
+    },
+
+    "css": {
+        "foodmap": {
+            "foodmap": [
+                "map"
+            ]
+        },
+        "homepage": {
+            "homepage": [
+                "index"
+            ]
+        }
     }
 }

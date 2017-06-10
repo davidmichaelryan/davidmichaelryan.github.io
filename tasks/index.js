@@ -26,10 +26,32 @@ gulp.task('scripts', ['clean_js'], () => {
     })
 });
 
-gulp.task('styles', ['clean_css'], () => gulp.src(['core/frontend/stylus/*.styl', 'modules/*/frontend/*.styl'])
-        .pipe(stylus())
-        .pipe(concat('styles.css'))
-        .pipe(gulp.dest('build/css')));
+gulp.task('styles', ['clean_css'], () => {
+    let globalPromise = new Promise((resolve, reject) => {
+        gulp.src('core/frontend/stylus/global.styl')
+            .pipe(stylus())
+            .pipe(concat('globals.css'))
+            .pipe(gulp.dest('build/css'))
+            .on("end", resolve);
+    });
+
+    let modulesPromise = new Promise((resolve, reject) => {
+        let { css } = assetConfig;
+        Promise.resolve(Object.keys(css).map((moduleName) => {
+            Promise.all(Object.keys(css[moduleName]).map((assetName) => {
+                    gulp.src(css[moduleName][assetName].map((fileName) => {
+                        return `${__dirname}/../modules/${moduleName}/frontend/${fileName}.styl`;
+                    }))
+                        .pipe(stylus())
+                        .pipe(concat(`${assetName}.css`))
+                        .pipe(gulp.dest('build/css'))
+                }))
+        }))
+        .then(resolve())
+    });
+
+    Promise.all([globalPromise, modulesPromise]);
+});
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default', ['scripts', 'styles']);
