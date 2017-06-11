@@ -1,4 +1,6 @@
-const flavorInjector = function () {
+/* global window */
+
+const flavorInjector = () => {
   window.flavortown = [
     {
       address: {

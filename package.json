@@ -7,36 +7,32 @@
     "type": "git",
     "url": "http://github.com/davidmichaelryan/davidmichaelryan.github.io"
   },
-  "dependencies": {
-    "babelify": "^7.3.0",
+  "dependencies": {    
     "body-parser": "^1.17.2",
-    "browserify": "^14.4.0",
     "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
-    "gulp-streamify": "^1.0.2",
-    "lodash": "^4.17.4",
     "morgan": "^1.8.2",
     "mustache": "^2.3.0",
     "pug": "^2.0.0-rc.2",
-    "request": "^2.81.0",
-    "vinyl-source-stream": "^1.1.0"
+    "request": "^2.81.0"
   },
   "devDependencies": {
+    "browserify": "^14.4.0",
     "del": "^2.2.2",
     "eslint": "^3.19.0",
     "eslint-config-groupon": "^4.0.0",
     "eslint-plugin-import": "^2.3.0",
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
     "gulp-rename": "^1.2.2",
     "gulp-stylus": "^1.2.0",
-    "haversine": "^1.0.2"
+    "haversine": "^1.0.2",
+    "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
     "build": "gulp",
-    "lint": "eslint index.js gulpfile.js modules",
-    "lint-fix": "eslint --fix index.js gulpfile.js modules",
+    "lint": "eslint index.js gulpfile.js core modules",
+    "lint-fix": "eslint --fix index.js gulpfile.js core modules",
     "start": "node index.js"
   },
   "author": "David Ryan",

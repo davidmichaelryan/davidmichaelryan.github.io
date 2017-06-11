@@ -1,10 +1,10 @@
 const asyncScripts = {};
 
-const confirmArrival = function (asset) {
+const confirmArrival = (asset) => {
   if (asset != null) {
     asyncScripts[asset] = true;
   }
   return asyncScripts;
-}
+};
 
 module.exports = confirmArrival;

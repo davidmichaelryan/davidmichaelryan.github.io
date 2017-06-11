@@ -143,7 +143,7 @@ function addAllLocations() {
   }
 }
 
-window.initMap = function() {
+window.initMap = function () {
   FoodMap = {};
   FoodMap.directionsService = new google.maps.DirectionsService();
   FoodMap.directionsDisplay = new google.maps.DirectionsRenderer();
@@ -163,7 +163,7 @@ window.initMap = function() {
   FoodMap.googleMap = map;
 
   _initMapForm();
-}
+};
 
 window.updateMap = function () {
   FoodMap.markers.map((marker) => {
@@ -201,4 +201,4 @@ window.updateMap = function () {
   }, (err) => {
     throw new Error(`fetching directions failed with status: ${status}`);
   });
-}
+};
