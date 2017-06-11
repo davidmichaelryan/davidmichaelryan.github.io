@@ -1,3 +1,5 @@
+'use strict';
+
 const asyncScripts = {};
 
 const confirmArrival = (asset) => {

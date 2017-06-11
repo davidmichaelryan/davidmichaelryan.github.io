@@ -1,4 +1,5 @@
 /* eslint global-require: 0 */
+'use strict';
 
 const dotenv = require('dotenv');
 

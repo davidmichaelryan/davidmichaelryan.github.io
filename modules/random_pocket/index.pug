@@ -5,4 +5,14 @@ append head
         include css.pug
 
 block content
-  include content.pug
+    div.row
+        h1.title_header.counter(data-num="999")
+            | Random Pocket
+
+        h3
+            | A tool to help you get through your massive Pocket archive
+
+    block auth
+
+block js
+    include js.pug

@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp');
 const stylus = require('gulp-stylus');
 const rename = require('gulp-rename');
@@ -12,6 +14,7 @@ gulp.task('clean', ['clean_css', 'clean_js'], () => {});
 const jsAssets = {
   foodmap: 'modules/foodmap/frontend/index.js',
   flavortown: 'modules/foodmap/frontend/flavortown.js',
+  random_pocket: 'modules/random_pocket/frontend/index.js'
 };
 
 gulp.task('scripts', ['clean_js'], () => {
