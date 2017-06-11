@@ -1,8 +1,9 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-/* global window */
 'use strict';
 
-const flavorInjector = () => {
+/* global window */
+
+var flavorInjector = function flavorInjector() {
   window.flavortown = [{
     address: {
       city: 'Gardiner',
@@ -182,7 +183,7 @@ const flavorInjector = () => {
       street: '6591 Ohio River Road'
     },
     formattedAddress: '6591 Ohio River Road, Lesage, WV',
-    phone: '3047622458\u200e',
+    phone: '3047622458\u200E',
     title: 'Hillbilly Hot Dogs',
     website: 'http://www.hillbillyhotdogs.com'
   }, {
@@ -1430,7 +1431,7 @@ const flavorInjector = () => {
       street: '4087 New Getwell Road'
     },
     formattedAddress: '4087 New Getwell Road, Memphis, TN 38118',
-    phone: '9013656690\u200e',
+    phone: '9013656690\u200E',
     title: "Tom's Bar-B-Q",
     website: 'http://www.tomsbarbq.com'
   }, {
@@ -3510,7 +3511,7 @@ const flavorInjector = () => {
       street: '5840 W Roosevelt Road'
     },
     formattedAddress: '5840 W Roosevelt Road, Chicago, IL 60644',
-    phone: '7732618422\u200e',
+    phone: '7732618422\u200E',
     title: 'The Depot American Diner CLOSED',
     website: 'http://www.depotamericandiner.com/'
   }, {
@@ -3965,7 +3966,7 @@ const flavorInjector = () => {
       street: '1840 Meheula Pkwy'
     },
     formattedAddress: '1840 Meheula Pkwy, Mililani Town, HI',
-    phone: '8086263400\u200e',
+    phone: '8086263400\u200E',
     title: 'Poke Stop',
     website: 'http://poke-stop.com/'
   }, {
@@ -4095,7 +4096,7 @@ const flavorInjector = () => {
       street: '1006 Cadillac Ct'
     },
     formattedAddress: '1006 Cadillac Ct, Fairbanks, AK 99701',
-    phone: '9074798319\u200e',
+    phone: '9074798319\u200E',
     title: 'The Cookie Jar',
     website: 'http://www.cookiejarfairbanks.com'
   }, {
@@ -4134,7 +4135,7 @@ const flavorInjector = () => {
       street: 'Mi 14 Richardson Hwy'
     },
     formattedAddress: 'Mi 14 Richardson Hwy, North Pole, AK 99705',
-    phone: '9074883268\u200e',
+    phone: '9074883268\u200E',
     title: "Elf's Den Restaurant Lounge",
     website: []
   }, {

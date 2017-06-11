@@ -1,7 +1,8 @@
 extends index.pug
 
 block auth
-    h1.auth
-        | Authorizing
-
     include content.pug
+
+block js
+    include js.pug
+

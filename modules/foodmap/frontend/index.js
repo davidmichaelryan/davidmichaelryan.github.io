@@ -1,5 +1,3 @@
-'use strict';
-
 const haversine = require('haversine');
 const confirmArrival = require('./confirmArrival.js');
 

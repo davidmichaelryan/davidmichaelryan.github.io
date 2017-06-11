@@ -1,11 +1,10 @@
-'use strict';
-
 const gulp = require('gulp');
 const stylus = require('gulp-stylus');
 const rename = require('gulp-rename');
 const del = require('del');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
+const babelify = require('babelify');
 
 gulp.task('clean_js', () => del(['build/js/*.js']));
 gulp.task('clean_css', () => del(['build/css/*.css']));
@@ -14,13 +13,13 @@ gulp.task('clean', ['clean_css', 'clean_js'], () => {});
 const jsAssets = {
   foodmap: 'modules/foodmap/frontend/index.js',
   flavortown: 'modules/foodmap/frontend/flavortown.js',
-  random_pocket: 'modules/random_pocket/frontend/index.js'
+  random_pocket: 'modules/random_pocket/frontend/index.js',
 };
 
 gulp.task('scripts', ['clean_js'], () => {
   Promise.all(Object.keys(jsAssets).map(assetName => new Promise((resolve) => {
     browserify(jsAssets[assetName])
-                .transform('babelify')
+                .transform('babelify', {presets: ["es2015"]})
                 .bundle()
                 .pipe(source(jsAssets[assetName]))
                 .pipe(rename(`${assetName}.js`))

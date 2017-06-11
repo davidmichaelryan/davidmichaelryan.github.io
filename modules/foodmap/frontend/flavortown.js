@@ -1,5 +1,4 @@
 /* global window */
-'use strict';
 
 const flavorInjector = () => {
   window.flavortown = [
