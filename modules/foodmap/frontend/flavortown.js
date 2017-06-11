@@ -1,7 +1,5 @@
-let flavortown;
-
 const flavorInjector = function () {
-  flavortown = [
+  window.flavortown = [
     {
       address: {
         city: 'Gardiner',
