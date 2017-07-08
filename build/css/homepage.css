@@ -1,5 +1,5 @@
 section {
-  padding: 40px 20px;
+  padding: 0 20px 40px 20px;
   background-color: #507499;
   color: #d6ddec;
 }
@@ -29,6 +29,9 @@ section a *:after {
 }
 section a:visited {
   color: #d6ddec;
+}
+section:first-child {
+  padding-top: 20px;
 }
 section .row h1 {
   border-bottom: 1px solid #d6ddec;

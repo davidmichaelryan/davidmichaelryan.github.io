@@ -5,6 +5,8 @@ const del = require('del');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
 const babelify = require('babelify');
+// const sourcemaps = require('gulp-sourcemaps');
+// const buffer = require('vinyl-buffer');
 
 gulp.task('clean_js', () => del(['build/js/*.js']));
 gulp.task('clean_css', () => del(['build/css/*.css']));
@@ -19,10 +21,13 @@ const jsAssets = {
 gulp.task('scripts', ['clean_js'], () => {
   Promise.all(Object.keys(jsAssets).map(assetName => new Promise((resolve) => {
     browserify(jsAssets[assetName])
-                .transform('babelify', {presets: ["es2015"]})
+                .transform('babelify', { presets: ['es2015'], sourceMaps: true })
                 .bundle()
                 .pipe(source(jsAssets[assetName]))
+                // .pipe(buffer())
                 .pipe(rename(`${assetName}.js`))
+                // .pipe(sourcemaps.init({loadMaps: true}))
+                // .pipe(sourcemaps.write('./'))
                 .pipe(gulp.dest('build/js'))
                 .on('end', resolve);
   })));

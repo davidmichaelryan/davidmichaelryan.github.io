@@ -2,13 +2,16 @@
 @import "../../../core/frontend/stylus/linkUnderlines.styl"
 
 section
-  padding: 40px 20px
+  padding: 0 20px 40px 20px
   background-color: $jcrew-light-blue
   color: $background-color
   
   a
     linkUnderlines $jcrew-light-blue, $background-color
  
+  &:first-child
+    padding-top: 20px
+
  section 
   .row
     h1
