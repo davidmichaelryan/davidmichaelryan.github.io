@@ -91,7 +91,7 @@ class FoodMap {
             (response) => {
               this.mapHandler.directionsDisplay.setDirections(response);
               const suggestedStops = this.searchForStops(response);
-              suggestedStops.map((location) => this.addLocationToMap(location));
+              suggestedStops.map(location => this.addLocationToMap(location));
             }, (err) => {
               throw new Error(`fetching directions failed with status: ${err}`);
             },

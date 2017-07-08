@@ -6,7 +6,8 @@ html
     include head.pug
   
   body
-    include ../modules/header/index.pug
+    block header
+        include ../modules/header/index.pug
     
     div#content
         block content
