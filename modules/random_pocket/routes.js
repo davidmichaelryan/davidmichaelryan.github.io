@@ -24,7 +24,7 @@ module.exports = (app) => {
           res.cookie('token', request_token, { maxAge: 900000 });
           return res.redirect(url);
         }
-      },
+      }
     );
   });
 
