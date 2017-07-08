@@ -1,3 +1,5 @@
+/* global document */
+
 class FormHandler {
   constructor(selector) {
     this.$el = document.getElementById(selector);

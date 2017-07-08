@@ -1,3 +1,5 @@
+/* global window, document */
+
 class MapHandler {
   constructor(google, elementId) {
     this.google = google;
@@ -29,8 +31,14 @@ class MapHandler {
   }
 
   initMap(options) {
-    options.mapTypeId = this.google.maps.MapTypeId[options.mapType];
-    this.instance = new this.google.maps.Map(this.$map, options);
+    const mapOptions = {
+      mapTypeId: this.google.maps.MapTypeId[options.mapType],
+      center: { lat: options.lat, lng: options.lng },
+      scrollwheel: false,
+      zoom: 8,
+    };
+
+    this.instance = new this.google.maps.Map(this.$map, mapOptions);
     this.directionsDisplay.setMap(this.instance);
   }
 
@@ -48,22 +56,13 @@ class MapHandler {
   fetchDirections(startingLocation, endingLocation) {
     return new Promise((resolve, reject) => {
       this.makeDirections(startingLocation, endingLocation, (response, status) => {
-        if (status == this.google.maps.DirectionsStatus.OK) {
+        if (status === this.google.maps.DirectionsStatus.OK) {
           resolve(response);
         } else {
           reject(status);
         }
       });
     });
-  }
-
-  getHalfwayPoint(directionsData) {
-    const overview_path = directionsData.routes[0].overview_path;
-    const path_halfway_point = Math.floor(overview_path.length / 2);
-    return {
-      latitude: overview_path[path_halfway_point].lat(),
-      longitude: overview_path[path_halfway_point].lng(),
-    };
   }
 }
 

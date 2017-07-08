@@ -12,6 +12,7 @@
     "cookie-parser": "^1.4.3",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
+    "haversine": "^1.0.2",
     "morgan": "^1.8.2",
     "mustache": "^2.3.0",
     "pug": "^2.0.0-rc.2",
@@ -29,7 +30,6 @@
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-stylus": "^1.2.0",
-    "haversine": "^1.0.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   },

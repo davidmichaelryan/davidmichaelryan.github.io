@@ -1,8 +1,19 @@
+/* global window */
+
 const MapHandler = require('./MapHandler.js');
 const FormHandler = require('./FormHandler.js');
 const PathFinder = require('./PathFinder');
+const confirmArrival = require('./confirmArrival.js');
 
-window.confirmArrival = require('./confirmArrival.js');
+window.confirmArrival = confirmArrival;
+
+const getFlavorTownData = () => {
+  if ((confirmArrival().flavortown !== true) || (!window.flavortown)) {
+    throw new Error('flavortown assets have not loaded');
+  } else {
+    return window.flavortown;
+  }
+};
 
 class FoodMap {
   constructor(google) {
@@ -21,31 +32,20 @@ class FoodMap {
 
   initGoogleMaps() {
     this.mapHandler.initMap({
-      center: { lat: 41.8781, lng: -87.6298 },
+      lat: 41.8781,
+      lng: -87.6298,
       mapType: 'ROADMAP',
-      scrollwheel: false,
-      zoom: 8,
     });
   }
 
   clearMapData() {
-    this.markers.map((marker) => {
-      marker.setMap(null);
-    });
+    this.markers.map(marker => marker.setMap(null));
     this.infoWindows = [];
     this.markers = [];
   }
 
-  getFlavorTownData() {
-    if ((confirmArrival().flavortown != true) || (!window.flavortown)) {
-      throw new Error('flavortown assets have not loaded');
-    } else {
-      return window.flavortown;
-    }
-  }
-
   searchForStops(directionsData) {
-    const flavortown = this.getFlavorTownData();
+    const flavortown = getFlavorTownData();
     return this.pathFinder.searchForStops(directionsData, flavortown, 10, 'mi');
   }
 
@@ -71,9 +71,7 @@ class FoodMap {
       title: location.title,
     });
     newMarker.addListener('click', () => {
-      this.infoWindows.map((infoWindow) => {
-        infoWindow.close();
-      });
+      this.infoWindows.map(infoWindow => infoWindow.close());
       newInfoWindow.open(this.mapHandler.instance, newMarker);
     });
     this.infoWindows.push(newInfoWindow);
@@ -93,11 +91,9 @@ class FoodMap {
             (response) => {
               this.mapHandler.directionsDisplay.setDirections(response);
               const suggestedStops = this.searchForStops(response);
-              for (let i = 0; i < suggestedStops.length; i++) {
-                this.addLocationToMap(suggestedStops[i]);
-              }
+              suggestedStops.map(this.addLocationToMap);
             }, (err) => {
-              throw new Error(`fetching directions failed with status: ${status}`);
+              throw new Error(`fetching directions failed with status: ${err}`);
             },
         );
   }
