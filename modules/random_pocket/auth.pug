@@ -4,5 +4,7 @@ block auth
     include content.pug
 
 block js
+    script.
+        window.loggedIn = true;
+        
     include js.pug
-

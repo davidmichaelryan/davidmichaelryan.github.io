@@ -1,0 +1,151 @@
+@-moz-keyframes avatarzomg {
+  0%, 100% {
+    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
+    filter: invert(0) saturate(100%) hue-rotate(0deg);
+  }
+  25% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
+    filter: invert(10%) saturate(500%) hue-rotate(180deg);
+  }
+  50% {
+    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
+    filter: invert(10%) saturate(300%) hue-rotate(300deg);
+  }
+  75% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
+    filter: invert(10%) saturate(500%) hue-rotate(90deg);
+  }
+}
+@-webkit-keyframes avatarzomg {
+  0%, 100% {
+    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
+    filter: invert(0) saturate(100%) hue-rotate(0deg);
+  }
+  25% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
+    filter: invert(10%) saturate(500%) hue-rotate(180deg);
+  }
+  50% {
+    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
+    filter: invert(10%) saturate(300%) hue-rotate(300deg);
+  }
+  75% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
+    filter: invert(10%) saturate(500%) hue-rotate(90deg);
+  }
+}
+@-o-keyframes avatarzomg {
+  0%, 100% {
+    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
+    filter: invert(0) saturate(100%) hue-rotate(0deg);
+  }
+  25% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
+    filter: invert(10%) saturate(500%) hue-rotate(180deg);
+  }
+  50% {
+    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
+    filter: invert(10%) saturate(300%) hue-rotate(300deg);
+  }
+  75% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
+    filter: invert(10%) saturate(500%) hue-rotate(90deg);
+  }
+}
+@keyframes avatarzomg {
+  0%, 100% {
+    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
+    filter: invert(0) saturate(100%) hue-rotate(0deg);
+  }
+  25% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
+    filter: invert(10%) saturate(500%) hue-rotate(180deg);
+  }
+  50% {
+    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
+    filter: invert(10%) saturate(300%) hue-rotate(300deg);
+  }
+  75% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
+    filter: invert(10%) saturate(500%) hue-rotate(90deg);
+  }
+}
+header.row {
+  max-width: 850px;
+  margin: 0px auto;
+  overflow: hidden;
+  padding: 30px 0 0 0;
+  position: relative;
+  text-align: center;
+}
+header.row h1 {
+  margin: 20px 0 0 0;
+  float: left;
+  width: 66.6666667%;
+  font-size: 72px;
+  display: none;
+  text-align: left;
+  color: #3975a0;
+}
+header.row img {
+  float: none;
+  text-align: center;
+  width: 160px;
+  position: relative;
+  top: 5px;
+}
+@media screen and (min-width: 401px) {
+  header.row {
+    padding: 40px 0 0 0;
+  }
+}
+@media screen and (min-width: 641px) {
+  header.row img {
+    float: right;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    width: 33.3333333%;
+    max-width: 140px;
+    top: 0;
+  }
+  header.row h1 {
+    display: block;
+  }
+}
+header.row .face-mask {
+  position: absolute;
+  left: 50%;
+  top: 52px;
+  margin-left: -29px;
+  width: 51px;
+  height: auto;
+  fill: #fbecdf;
+}
+header.row .face-mask:hover {
+  -webkit-animation: avatarzomg 0.4s infinite;
+  -moz-animation: avatarzomg 0.4s infinite;
+  animation: avatarzomg 0.4s infinite;
+}
+@media screen and (min-width: 401px) {
+  header.row .face-mask {
+    top: 62px;
+  }
+}
+@media screen and (min-width: 641px) {
+  header.row .face-mask {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    left: initial;
+    top: 55px;
+    width: 44px;
+    right: 45px;
+  }
+}

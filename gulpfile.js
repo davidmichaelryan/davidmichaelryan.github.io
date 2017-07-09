@@ -4,7 +4,7 @@ const rename = require('gulp-rename');
 const del = require('del');
 const browserify = require('browserify');
 const source = require('vinyl-source-stream');
-const babelify = require('babelify');
+const babelify = require('babelify'); // eslint-disable-line
 // const sourcemaps = require('gulp-sourcemaps');
 // const buffer = require('vinyl-buffer');
 

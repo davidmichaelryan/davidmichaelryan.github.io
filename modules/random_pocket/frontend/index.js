@@ -1,6 +1,13 @@
-const RandomPocket = require('./randomPocket.js');
+/* global window, document, $ */
 
-const randomPocketInit = () => new RandomPocket();
+const countdown = require('./countdown.js');
+
+const RandomPocket = require('./RandomPocket.js');
+
+const randomPocketInit = () => {
+  if (window.loggedIn) { return new RandomPocket(); }
+  return $(document).ready(countdown);
+};
 
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = randomPocketInit;

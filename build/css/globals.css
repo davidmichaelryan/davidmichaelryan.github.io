@@ -121,78 +121,6 @@
     left: 100%;
   }
 }
-@-moz-keyframes avatarzomg {
-  0%, 100% {
-    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
-    filter: invert(0) saturate(100%) hue-rotate(0deg);
-  }
-  25% {
-    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
-    filter: invert(10%) saturate(500%) hue-rotate(180deg);
-  }
-  50% {
-    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
-    filter: invert(10%) saturate(300%) hue-rotate(300deg);
-  }
-  75% {
-    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
-    filter: invert(10%) saturate(500%) hue-rotate(90deg);
-  }
-}
-@-webkit-keyframes avatarzomg {
-  0%, 100% {
-    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
-    filter: invert(0) saturate(100%) hue-rotate(0deg);
-  }
-  25% {
-    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
-    filter: invert(10%) saturate(500%) hue-rotate(180deg);
-  }
-  50% {
-    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
-    filter: invert(10%) saturate(300%) hue-rotate(300deg);
-  }
-  75% {
-    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
-    filter: invert(10%) saturate(500%) hue-rotate(90deg);
-  }
-}
-@-o-keyframes avatarzomg {
-  0%, 100% {
-    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
-    filter: invert(0) saturate(100%) hue-rotate(0deg);
-  }
-  25% {
-    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
-    filter: invert(10%) saturate(500%) hue-rotate(180deg);
-  }
-  50% {
-    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
-    filter: invert(10%) saturate(300%) hue-rotate(300deg);
-  }
-  75% {
-    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
-    filter: invert(10%) saturate(500%) hue-rotate(90deg);
-  }
-}
-@keyframes avatarzomg {
-  0%, 100% {
-    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
-    filter: invert(0) saturate(100%) hue-rotate(0deg);
-  }
-  25% {
-    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
-    filter: invert(10%) saturate(500%) hue-rotate(180deg);
-  }
-  50% {
-    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
-    filter: invert(10%) saturate(300%) hue-rotate(300deg);
-  }
-  75% {
-    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
-    filter: invert(10%) saturate(500%) hue-rotate(90deg);
-  }
-}
 html {
   background-color: #d6ddec;
   color: #212121;
@@ -271,6 +199,78 @@ li span {
 }
 div.row {
   max-width: 840px;
+}
+@-moz-keyframes avatarzomg {
+  0%, 100% {
+    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
+    filter: invert(0) saturate(100%) hue-rotate(0deg);
+  }
+  25% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
+    filter: invert(10%) saturate(500%) hue-rotate(180deg);
+  }
+  50% {
+    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
+    filter: invert(10%) saturate(300%) hue-rotate(300deg);
+  }
+  75% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
+    filter: invert(10%) saturate(500%) hue-rotate(90deg);
+  }
+}
+@-webkit-keyframes avatarzomg {
+  0%, 100% {
+    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
+    filter: invert(0) saturate(100%) hue-rotate(0deg);
+  }
+  25% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
+    filter: invert(10%) saturate(500%) hue-rotate(180deg);
+  }
+  50% {
+    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
+    filter: invert(10%) saturate(300%) hue-rotate(300deg);
+  }
+  75% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
+    filter: invert(10%) saturate(500%) hue-rotate(90deg);
+  }
+}
+@-o-keyframes avatarzomg {
+  0%, 100% {
+    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
+    filter: invert(0) saturate(100%) hue-rotate(0deg);
+  }
+  25% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
+    filter: invert(10%) saturate(500%) hue-rotate(180deg);
+  }
+  50% {
+    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
+    filter: invert(10%) saturate(300%) hue-rotate(300deg);
+  }
+  75% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
+    filter: invert(10%) saturate(500%) hue-rotate(90deg);
+  }
+}
+@keyframes avatarzomg {
+  0%, 100% {
+    -webkit-filter: invert(0) saturate(100%) hue-rotate(0deg);
+    filter: invert(0) saturate(100%) hue-rotate(0deg);
+  }
+  25% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(180deg);
+    filter: invert(10%) saturate(500%) hue-rotate(180deg);
+  }
+  50% {
+    -webkit-filter: invert(10%) saturate(300%) hue-rotate(300deg);
+    filter: invert(10%) saturate(300%) hue-rotate(300deg);
+  }
+  75% {
+    -webkit-filter: invert(10%) saturate(500%) hue-rotate(90deg);
+    filter: invert(10%) saturate(500%) hue-rotate(90deg);
+  }
 }
 header.row {
   max-width: 850px;
@@ -377,4 +377,9 @@ footer h3 {
   right: 0;
   bottom: 0;
   left: 0;
+}
+#content.work h1 {
+  font-size: 3.5em;
+  margin: 40px 0 20px 0;
+  line-height: 1.2;
 }

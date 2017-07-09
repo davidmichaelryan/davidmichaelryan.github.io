@@ -1,0 +1,27 @@
+footer {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: #212121;
+  color: #d6ddec;
+}
+footer .row {
+  padding: 0 20px;
+}
+footer h3 {
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+  margin: 10px 0;
+}
+#smedia > a {
+  position: relative;
+  display: inline-block;
+  background-image: none;
+}
+#smedia > a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

@@ -4,12 +4,15 @@ append head
     append css
         include css.pug
 
+block header
+
 block content
-    div.row
-        h1.title_header.counter(data-num="999")
-            | Random Pocket
+    div#content.work
+        div.row
+            h1.title_header.counter(data-num="999")
+                | Random Pocket
 
-        h3
-            | A tool to help you get through your massive Pocket archive
+            h3.subtitle
+                | A tool to help you get through your massive Pocket archive
 
-    block auth
+        block auth

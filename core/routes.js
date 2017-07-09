@@ -28,8 +28,9 @@ const routes = (app) => {
   });
 
   fetchModuleNames().forEach((moduleName) => {
-    if (fs.statSync(moduleFoldersPath + moduleName).isFile()) {
-      require(`${moduleFoldersPath + moduleName}/routes`)(app);
+    const routesFileName = `${moduleFoldersPath}${moduleName}/routes.js`;
+    if (fs.existsSync(routesFileName) && fs.statSync(routesFileName).isFile()) {
+      require(`${moduleFoldersPath + moduleName}/routes.js`)(app);
     } else {
       defaultRoute(app, moduleName);
     }

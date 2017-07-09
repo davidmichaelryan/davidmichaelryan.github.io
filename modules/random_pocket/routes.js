@@ -1,43 +1,29 @@
 const request = require('request');
+const { getArticleBatch } = require('./helpers.js');
 
 require('dotenv').load();
+
 const consumerKey = process.env.CONSUMER_KEY;
 
 module.exports = (app) => {
-  app.get('/random_pocket/request', (req, res) => {
-    request.post('https://getpocket.com/v3/oauth/request', {
-      form: {
-        consumer_key: consumerKey,
-        redirect_uri: '/random_pocket',
-      },
-    },
-      (error, response, body) => {
-        if (error) {
-
-        } else {
-          const request_token = body.split('=')[1];
-          const url = `https://getpocket.com/auth/authorize?request_token=${
-                       request_token
-                       }&redirect_uri=http://${
-                       req.headers.host
-                       }/random_pocket`;
-          res.cookie('token', request_token, { maxAge: 900000 });
-          return res.redirect(url);
-        }
-      },
-    );
+  app.get('/random_pocket', (req, res) => {
+    if (req.cookies.token !== undefined) {
+      res.render('modules/random_pocket/auth');
+    } else {
+      res.render('modules/random_pocket/login');
+    }
   });
 
-  app.post('/authorize', (req, res) => {
+  app.post('/random_pocket/authorize', (req, res) => {
     if (req.cookies.access_token) {
       return res.send('success');
     }
 
-    const token_cookie = req.cookies.token;
-    request.post('https://getpocket.com/v3/oauth/authorize', {
+    const tokenCookie = req.cookies.token;
+    return request.post('https://getpocket.com/v3/oauth/authorize', {
       form: {
         consumer_key: consumerKey,
-        code: token_cookie,
+        code: tokenCookie,
       },
     },
     (error, response, body) => {
@@ -51,17 +37,32 @@ module.exports = (app) => {
     });
   });
 
-  app.get('/random_pocket', (req, res) => {
-    if (req.cookies.token !== undefined) {
-      res.render('modules/random_pocket/auth');
-    } else {
-      res.render('modules/random_pocket/login');
-    }
-  });
+  app.get('/random_pocket/request', (req, res) =>
+    request.post('https://getpocket.com/v3/oauth/request', {
+      form: {
+        consumer_key: consumerKey,
+        redirect_uri: '/random_pocket',
+      },
+    },
+      (error, response, body) => {
+        if (error) {
+          return res.send(`error: ${error}`);
+        }
+        const requestToken = body.split('=')[1];
+        const url = `https://getpocket.com/auth/authorize?request_token=${
+                       requestToken
+                       }&redirect_uri=http://${
+                       req.headers.host
+                       }/random_pocket`;
+        res.cookie('token', requestToken, { maxAge: 900000 });
+        return res.redirect(url);
+      }
+    )
+  );
 
-  app.post('/random', (req, res) => {
+  app.post('/random_pocket/random', (req, res) => {
     const accessToken = req.cookies.access_token;
-    request.post('https://getpocket.com/v3/get',
+    return request.post('https://getpocket.com/v3/get',
       {
         form: {
           consumer_key: consumerKey,
@@ -71,9 +72,9 @@ module.exports = (app) => {
       (error, response, body) => {
         let { list: articles } = JSON.parse(body);
         articles = Object.keys(articles).map(k => articles[k]);
-        const rand = Math.floor(Math.random() * articles.length);
-        const randomArticle = articles[rand];
-        return res.send(randomArticle);
+
+        const randomArticles = getArticleBatch(articles);
+        return res.send(randomArticles);
       });
   });
 
