@@ -21,7 +21,7 @@ const jsAssets = {
 gulp.task('scripts', ['clean_js'], () => {
   Promise.all(Object.keys(jsAssets).map(assetName => new Promise((resolve) => {
     browserify(jsAssets[assetName])
-                .transform('babelify', { presets: ['es2015'], sourceMaps: true })
+                .transform('babelify', { presets: ['env'], sourceMaps: true })
                 .bundle()
                 .pipe(source(jsAssets[assetName]))
                 // .pipe(buffer())
