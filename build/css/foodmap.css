@@ -5,12 +5,11 @@
 }
 input,
 label {
-  display: block;
+  display: inline-block;
 }
 label {
   margin-right: 30px;
   margin-bottom: 10px;
-  display: inline-block;
 }
 label input {
   display: inline;

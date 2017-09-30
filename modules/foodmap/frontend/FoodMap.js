@@ -94,7 +94,7 @@ class FoodMap {
               suggestedStops.map(location => this.addLocationToMap(location));
             }, (err) => {
               throw new Error(`fetching directions failed with status: ${err}`);
-            },
+            }
         );
   }
 }
