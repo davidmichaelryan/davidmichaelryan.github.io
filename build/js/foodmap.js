@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -376,25 +376,43 @@ window.initMap = function () {
 
 },{"./FoodMap.js":1,"./confirmArrival.js":5}],8:[function(require,module,exports){
 var haversine = (function () {
+  var RADII = {
+    km:    6371,
+    mile:  3960,
+    meter: 6371000,
+    nmi:   3440
+  }
 
   // convert to radians
   var toRad = function (num) {
     return num * Math.PI / 180
   }
 
-  return function haversine (start, end, options) {
+  // convert coordinates to standard format based on the passed format option
+  var convertCoordinates = function (format, coordinates) {
+    switch (format) {
+    case '[lat,lon]':
+      return { latitude: coordinates[0], longitude: coordinates[1] }
+    case '[lon,lat]':
+      return { latitude: coordinates[1], longitude: coordinates[0] }
+    case '{lon,lat}':
+      return { latitude: coordinates.lat, longitude: coordinates.lon }
+    case 'geojson':
+      return { latitude: coordinates.geometry.coordinates[1], longitude: coordinates.geometry.coordinates[0] }
+    default:
+      return coordinates
+    }
+  }
+
+  return function haversine (startCoordinates, endCoordinates, options) {
     options   = options || {}
 
-    var radii = {
-      km:    6371,
-      mile:  3960,
-      meter: 6371000,
-      nmi:   3440
-    }
+    var R = options.unit in RADII
+      ? RADII[options.unit]
+      : RADII.km
 
-    var R = options.unit in radii
-      ? radii[options.unit]
-      : radii.km
+    var start = convertCoordinates(options.format, startCoordinates)
+    var end = convertCoordinates(options.format, endCoordinates)
 
     var dLat = toRad(end.latitude - start.latitude)
     var dLon = toRad(end.longitude - start.longitude)

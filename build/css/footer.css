@@ -16,6 +16,10 @@ footer h3 {
   position: relative;
   display: inline-block;
   background-image: none;
+  margin-right: 5px;
+}
+#smedia > a:last-child {
+  margin: 0;
 }
 #smedia > a:after {
   content: "";

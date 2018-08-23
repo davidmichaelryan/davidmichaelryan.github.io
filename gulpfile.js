@@ -16,6 +16,7 @@ const jsAssets = {
   foodmap: 'modules/foodmap/frontend/index.js',
   flavortown: 'modules/foodmap/frontend/flavortown.js',
   random_pocket: 'modules/random_pocket/frontend/index.js',
+  twitter_recap: 'modules/twitter_recap/frontend/index.js',
 };
 
 gulp.task('scripts', ['clean_js'], () => {
@@ -35,14 +36,14 @@ gulp.task('scripts', ['clean_js'], () => {
 
 gulp.task('styles', ['clean_css'], () => {
   gulp.src([
-    'core/frontend/stylus/global.styl',
+    'core/frontend/stylus/*.styl',
     'modules/*/frontend/*.styl',
   ])
         .pipe(stylus())
         .pipe(rename((path) => {
           let newName;
           if (path.dirname === '.') {
-            newName = 'globals';
+            newName = path.basename;
           } else {
             newName = path.dirname.split('/')[0];
           }

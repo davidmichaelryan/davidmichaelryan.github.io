@@ -1,4 +1,4 @@
-id," name"," address"," zip_code"," city"," state",Latitude,Longitude,"Accuracy Score","Accuracy Type",Number,Street,City,State,County,Zip,Country
+seid," name"," address"," zip_code"," city"," state",Latitude,Longitude,"Accuracy Score","Accuracy Type",Number,Street,City,State,County,Zip,Country
 1," A1 Diner"," 3 Bridge Street"," 04345"," Gardiner"," ME",44.229879,-69.774471,1,rooftop,3,"Bridge St",Gardiner,ME,"Kennebec County",04345,US
 2," Tick Tock Diner"," 281 Allwood Road"," "," Clifton"," NJ",40.835121,-74.146908,1,range_interpolation,281,"Allwood Rd",Clifton,NJ,"Passaic County",07012,US
 3," Blue Moon Cafe"," 1621 Aliceanna Street"," "," Baltimore"," MD",39.283322,-76.594235,1,rooftop,1621,"Aliceanna St",Baltimore,MD,"Baltimore city",21231,US

@@ -4,8 +4,11 @@ append head
     append css
         include css.pug
 
-block content
-    div#content
-        include work.pug
+block header
 
-        //- include projects.pug
+block content
+    div#content.work
+        include content.pug
+
+block js
+    include js.pug
