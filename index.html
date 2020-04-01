@@ -13,9 +13,185 @@
     <title>David Michael Ryan</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Gentium+Book+Basic" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/ico"  href="assets/favicon.ico">
-    <link rel="stylesheet" href="assets/styles.css">
-    <script defer async src="assets/index.js">
-    </script>
+    <style>
+      /*
+        layout reset for elements used
+      */
+      html, body, div, span, header, footer, section, article, p, img, h1, h2, h3, h4, ul, li {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+      }
+
+      /*
+        enforce preferred box-sizing
+      */
+      html {
+        box-sizing: border-box;
+      }
+
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+
+      /*
+        base styles for app
+      */
+      :root {
+        --jcrew-light-blue: rgb(80, 116, 153);
+        --jcrew-dark-turquoise: rgb(57, 117, 160);
+        --jcrew-light-purple: rgb(214, 221, 236);
+      }
+
+      html {
+        font-size: 10px;
+      }
+
+      body {
+        background-color: var(--jcrew-light-blue);
+        color: var(--jcrew-light-purple);
+
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1;
+
+        margin: 0 auto;
+      }
+
+      body a {
+        color: var(--jcrew-light-purple);
+      }
+
+      body > *:first-child {
+        padding-top: 40px;
+      }
+
+      .content {
+        margin: 0 auto;
+        padding: 0 10px;
+        max-width: 980px;
+        width: 100%;
+      }
+
+      /* specifically to force sticky footer */
+      html, body {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+
+      section.main-content {
+        flex: 1 0 auto;
+      }
+
+      footer {
+        flex-shrink: 0;
+      }
+
+      /*
+        header styles
+      */
+
+      header {
+        background: var(--jcrew-light-purple);
+        color: var(--jcrew-dark-turquoise);
+      }
+
+      header .content {
+        display: flex;
+        align-items: end; /* fallback, unsure about support*/
+        justify-content: space-between;
+      }
+
+      header h1 {
+        font-size: 7.2rem;
+        margin-bottom: 12px;
+      }
+
+      header img {
+        height: 171px;
+        max-width: 140px;
+        width: 100%;
+
+        transform: scaleX(-1);
+      }
+
+      /*
+        main content styles
+      */
+
+      .main-content {
+        background-color: var(--jcrew-light-blue);
+        color: var(--jcrew-light-purple);
+
+        padding: 40px 10px;
+      }
+
+      .main-content h2 {
+        border-bottom: 1px solid var(--jcrew-light-purple);
+        font-size: 4.8rem;
+      }
+
+      .main-content article {
+        margin: 24px 0;
+      }
+
+      .main-content article > * {
+        padding-left: 12px;
+      }
+
+      .main-content article h3, h4 {
+        font-size: 2.4rem;
+        line-height: 1.2;
+      }
+
+      .main-content article h3 {
+        font-size: 2.4rem;
+      }
+
+      .main-content article h4 {
+        font-size: 2rem;
+        font-style: italic;
+      }
+
+      .main-content article ul {
+        line-height: 1.5;
+        margin-top: 12px;
+        padding-left: 24px;
+        list-style: none;
+      }
+
+      .main-content article li {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+      }
+
+      /*
+        footer styles
+      */
+
+      footer {
+        background: rgb(33, 33, 33);
+        color: var(--jcrew-light-purple);
+
+        padding: 40px 0;
+      }
+
+      footer .content {
+        max-width: 780px;
+      }
+
+      footer p {
+        font-size: 1.6rem;
+        line-height: 1.33;
+
+        margin: 16px 0;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -61,5 +237,12 @@
         <p>David's childhood heroes include Derek Jeter, Ms. Frizzle, &amp; Dr. Alan Grant.</p>
       </section>
     </footer>
+    <script>
+      window.addEventListener('load', function() {
+        document.querySelectorAll('img.lazyload').forEach((imgEl) => {
+          imgEl.setAttribute('src', imgEl.dataset.src);
+        });
+      });
+    </script>
   </body>
 </html>
