@@ -120,14 +120,23 @@
         transform: scaleX(-1);
       }
 
+      /* stupid hack to prevent ugly line break */
+      @media screen and (min-width: 425px) {
+        .force-line-break {
+          display: none;
+        }
+      }
+
       /*
         main content styles
       */
 
-      .main-content {
+      .main-content-wrapper {
         background-color: var(--jcrew-light-blue);
         color: var(--jcrew-light-purple);
+      }
 
+      .main-content {
         padding: 40px 10px;
       }
 
@@ -197,36 +206,38 @@
         <img class="lazyload" data-src="assets/face.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
       </section>
     </header>
-    <section class="content main-content">
-      <h2>Work</h2>
-      <article>
-        <h3>Software Development Engineer III</h3>
-        <h4>Groupon, Inc</h4>
-        <ul>
-          <li>My work centers on the Deal Page team, which owns the deal details page on the main purchase flow of <a href="https://groupon.com">groupon.com</a>. I implement features and experiments, review code from team members and external contributors, resolve bugs, and work on the server &amp; client side to provide a better consumer experience. Recently, I've focused on improving latency and providing better analytical tools for developers.</li>
-          <li>My day-to-day work includes: writing Javascript on Node applications (and using Preact when it's helpful), polishing our layouts using Stylus, and ensuring that incoming code is up to our standards using Github.</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Executive Co-Chair</h3>
-        <h4>Northwestern University Dance Marathon</h4>
-        <ul>
-          <li>I spent most of my senior year at NU leading 20 other Executive Board members and over 1400 students in fundraising &amp; spreading awareness for the <a href="http://starlight.org">Starlight Children's Foundation</a> &amp; <a href="http://evanstonforever.org">Evanston Community Foundation</a>.</li>
-          <li>We raised $1.13 million for our beneficiaries, the second highest cash total in the organization's history. The money has been committed to building 11 <a href="http://starlight.org/starlightsites">Starlight Sites</a> in Chicagoland area hospitals and providing capacity building &amp; programming grants through the ECF <a href="http://evanstonforever.org/grants/responsive-grants/">Responsive Grants Program</a>.</li>
-        </ul>
-      </article>
-      <article>
-        <h3>Other Experience</h3>
-        <ul>
-          <li>
-            <span>Developer</span> | <a href="http://dilloday.com">DilloDay.com</a>
-          </li>
-          <li>
-            <span>QA Intern</span> | Obama for America (2012)
-          </li>
-        </ul>
-      </article>
-    </section>
+    <div class="main-content-wrapper">
+      <section class="content main-content">
+        <h2>Work</h2>
+        <article>
+          <h3>Software Development <br class="force-line-break"/>Engineer III</h3>
+          <h4>Groupon, Inc</h4>
+          <ul>
+            <li>My work centers on the Deal Page team, which owns the deal details page on the main purchase flow of <a href="https://groupon.com">groupon.com</a>. I implement features and experiments, review code from team members and external contributors, resolve bugs, and work on the server &amp; client side to provide a better consumer experience. Recently, I've focused on improving latency and providing better analytical tools for developers.</li>
+            <li>My day-to-day work includes: writing Javascript on Node applications (and using Preact when it's helpful), polishing our layouts using Stylus, and ensuring that incoming code is up to our standards using Github.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Executive Co-Chair</h3>
+          <h4>Northwestern University Dance Marathon</h4>
+          <ul>
+            <li>I spent most of my senior year at NU leading 20 other Executive Board members and over 1400 students in fundraising &amp; spreading awareness for the <a href="http://starlight.org">Starlight Children's Foundation</a> &amp; <a href="http://evanstonforever.org">Evanston Community Foundation</a>.</li>
+            <li>We raised $1.13 million for our beneficiaries, the second highest cash total in the organization's history. The money has been committed to building 11 <a href="http://starlight.org/starlightsites">Starlight Sites</a> in Chicagoland area hospitals and providing capacity building &amp; programming grants through the ECF <a href="http://evanstonforever.org/grants/responsive-grants/">Responsive Grants Program</a>.</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Other Experience</h3>
+          <ul>
+            <li>
+              <span>Developer</span> | <a href="http://dilloday.com">DilloDay.com</a>
+            </li>
+            <li>
+              <span>QA Intern</span> | Obama for America (2012)
+            </li>
+          </ul>
+        </article>
+      </section>
+    </div>
     <footer>
       <section class="content">
         <p>David Ryan is a Web Developer. He really digs consumer-facing products, and is happy to work along the entire stack to see his projects through. He currently works remotely in Boston for Groupon, Inc.</p>
