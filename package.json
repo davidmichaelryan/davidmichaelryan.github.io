@@ -1,45 +1,16 @@
 {
-  "name": "davidmichaelryan.com",
+  "name": "personal_website_2020",
   "version": "1.0.0",
-  "description": "David Ryan's Personal Website",
-  "main": "dist",
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/davidmichaelryan/davidmichaelryan.github.io"
-  },
-  "dependencies": {
-    "babel-preset-env": "^1.7.0",
-    "body-parser": "^1.17.2",
-    "cookie-parser": "^1.4.3",
-    "dotenv": "^4.0.0",
-    "express": "^4.15.3",
-    "haversine": "^1.0.2",
-    "morgan": "^1.8.2",
-    "mustache": "^2.3.0",
-    "pug": "^2.0.0-rc.2",
-    "request": "^2.81.0"
-  },
-  "devDependencies": {
-    "babelify": "^7.3.0",
-    "browserify": "^14.4.0",
-    "del": "^2.2.2",
-    "eslint": "^3.19.0",
-    "eslint-config-groupon": "^4.0.0",
-    "eslint-plugin-import": "^2.3.0",
-    "gulp": "^3.9.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-stylus": "^1.2.0",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
-  },
+  "description": "The Re-vamped Personal Website for David Ryan",
+  "main": "index.js",
   "scripts": {
-    "build": "gulp",
-    "lint": "eslint index.js gulpfile.js core modules",
-    "lint-fix": "eslint --fix index.js gulpfile.js core modules",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "David Ryan",
   "license": "ISC",
-  "homepage": "davidmichaelryan.com"
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
+  }
 }
