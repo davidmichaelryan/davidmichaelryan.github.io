@@ -13,6 +13,8 @@
     <title>David Michael Ryan</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Gentium+Book+Basic" rel="stylesheet" type="text/css">
     <link rel="icon" type="image/ico"  href="assets/favicon.ico">
+    <meta property="og:title" content="David's Personal Website"/>
+    <meta property="og:image" content="assets/face.png" />
     <style>
       /*
         layout reset for elements used
@@ -65,8 +67,8 @@
 
       body > *:first-child {
         padding-top: 40px;
-      }
 
+      }
       .content {
         margin: 0 auto;
         padding: 0 10px;
@@ -197,6 +199,25 @@
 
         margin: 16px 0;
       }
+
+      footer #social-media > a {
+        position: relative;
+        display: inline-block;
+        margin-right: 4px;
+      }
+
+      footer #social-media > a:last-child {
+        margin: 0;
+      }
+
+      footer #social-media > a:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+      }
     </style>
   </head>
   <body>
@@ -243,6 +264,14 @@
         <p>David Ryan is a Web Developer. He really digs consumer-facing products, and is happy to work along the entire stack to see his projects through. He currently works remotely in Boston for Groupon, Inc.</p>
         <p>David graduated from Northwestern University in 2015 with a B.A. in Computer Science, although if you ask him about it he's only going to want to talk about Dance Marathon.</p>
         <p>David's childhood heroes include Derek Jeter, Ms. Frizzle, &amp; Dr. Alan Grant.</p>
+        <div id="social-media">
+          <a href="http://www.github.com/davidmichaelryan">
+            <object type="image/svg+xml" data="assets/github.svg"></object>
+          </a>
+          <a href="http://www.linkedin.com/in/david-ryan-28a55261">
+            <object type="image/svg+xml" data="assets/linkedin.svg"></object>
+          </a>
+        </div>
       </section>
     </footer>
     <script>
