@@ -270,18 +270,24 @@
         <p>David's childhood heroes include Derek Jeter, Ms. Frizzle, &amp; Dr. Alan Grant.</p>
         <div id="social-media">
           <a aria-label="Link to Github" href="http://www.github.com/davidmichaelryan">
-            <object type="image/svg+xml" data="assets/github.svg">Link to Github</object>
+            <object class="lazyload" type="image/svg+xml" data-data="assets/github.svg">Link to Github</object>
           </a>
           <a aria-label="Link to Linkedin" href="http://www.linkedin.com/in/david-ryan-28a55261">
-            <object type="image/svg+xml" data="assets/linkedin.svg">Link to Linkedin</object>
+            <object class="lazyload" type="image/svg+xml" data-data="assets/linkedin.svg">Link to Linkedin</object>
           </a>
         </div>
       </section>
     </footer>
     <script>
+      const elementAttributeMap = {
+        img: 'src',
+        object: 'data'
+      };
+
       window.addEventListener('load', function() {
-        document.querySelectorAll('img.lazyload').forEach((imgEl) => {
-          imgEl.setAttribute('src', imgEl.dataset.src);
+        document.querySelectorAll('.lazyload').forEach((element) => {
+          const attrName = elementAttributeMap[element.nodeName.toLowerCase()];
+          element.setAttribute(attrName, element.dataset[attrName]);
         });
       });
     </script>
