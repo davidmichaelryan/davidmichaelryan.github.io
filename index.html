@@ -1,295 +1,292 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0 viewport-fit=cover">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="robots" content="index,follow,archive">
-    <meta itemprop="name" content="David Michael Ryan">
-    <meta name="author" content="David Ryan">
-    <meta name="keyword" content="David Ryan, David Michael Ryan, Web, Developer, Software, Engineer, Node, Chicago, Boston, Tech, Groupon">
-    <meta name="description" itemprop="description" content="David Michael Ryan | Web Developer">
-    <title>David Michael Ryan</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Gentium+Book+Basic" rel="stylesheet" type="text/css">
-    <link rel="icon" type="image/ico"  href="assets/favicon.ico">
-    <meta property="og:title" content="David's Personal Website"/>
-    <meta property="og:image" content="assets/face.png" />
-    <style>
-      /*
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="robots" content="index,follow,archive">
+  <meta itemprop="name" content="David Michael Ryan">
+  <meta name="author" content="David Ryan">
+  <meta name="keyword"
+    content="David Ryan, David Michael Ryan, Web, Developer, Software, Engineer, Node, Chicago, Boston, Tech, Groupon">
+  <meta name="description" itemprop="description" content="David Michael Ryan | Web Developer">
+  <title>David Michael Ryan</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Gentium+Book+Basic" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/ico" href="assets/favicon.ico">
+  <style>
+    /*
         layout reset for elements used
       */
-      html, body, div, span, header, footer, section, article, p, img, h1, h2, h3, h4, ul, li {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        font-size: 100%;
-        font: inherit;
-      }
+    html,
+    body,
+    div,
+    span,
+    header,
+    footer,
+    section,
+    article,
+    p,
+    img,
+    h1,
+    h2,
+    h3,
+    h4,
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+    }
 
-      /*
+    /*
         enforce preferred box-sizing
       */
-      html {
-        box-sizing: border-box;
-      }
+    html {
+      box-sizing: border-box;
+    }
 
-      *, *:before, *:after {
-        box-sizing: inherit;
-      }
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
 
-      /*
+    /*
         base styles for app
       */
-      :root {
-        --jcrew-light-blue: rgb(80, 116, 153);
-        --jcrew-dark-turquoise: rgb(57, 117, 160);
-        --jcrew-light-purple: rgb(214, 221, 236);
-      }
+    :root {
+      --jcrew-light-blue: rgb(80, 116, 153);
+      --jcrew-dark-turquoise: rgb(57, 117, 160);
+      /* --jcrew-light-purple: rgb(214, 221, 236); */
+      --jcrew-light-purple: white;
+    }
 
-      html {
-        font-size: 10px;
-      }
+    html {
+      font-size: 10px;
+    }
 
-      body {
-        background-color: #333;
-        color: var(--jcrew-light-purple);
+    body {
+      background-color: rgb(33, 33, 33);
+      color: var(--jcrew-light-purple);
 
-        font-family: 'Open Sans', sans-serif;
-        line-height: 1;
+      font-family: 'Open Sans', sans-serif;
+      line-height: 1;
 
-        margin: 0 auto;
-      }
+      margin: 0 auto;
+    }
 
-      body a {
-        color: var(--jcrew-light-purple);
-      }
+    body a {
+      color: var(--jcrew-light-purple);
+    }
 
-      body > *:first-child {
-        padding-top: 40px;
+    body>*:first-child {
+      padding-top: 40px;
+    }
 
-      }
-      .content {
-        margin: 0 auto;
-        padding: 0 10px;
-        max-width: 980px;
-        width: 100%;
-      }
+    .content {
+      margin: 0 auto;
+      padding: 0 0 0 10px;
+      max-width: 980px;
+      width: 100%;
+    }
 
-      /* specifically to force sticky footer */
-      html, body {
-        height: 100%;
-      }
+    /* specifically to force sticky footer */
+    html,
+    body {
+      height: 100%;
+    }
 
-      body {
-        display: flex;
-        flex-direction: column;
-      }
+    body {
+      display: flex;
+      flex-direction: column;
+    }
 
-      section.main-content {
-        flex: 1 0 auto;
-      }
+    section.main-content {
+      flex: 1 0 auto;
+    }
 
-      footer {
-        flex-shrink: 0;
-      }
+    footer {
+      flex-shrink: 0;
+    }
 
-      /*
+    /*
         header styles
       */
 
-      header {
-        background: var(--jcrew-light-purple);
-        color: var(--jcrew-dark-turquoise);
-      }
+    header {
+      background: var(--jcrew-light-purple);
+      color: var(--jcrew-dark-turquoise);
+    }
 
-      header .content {
-        display: flex;
-        align-items: end; /* fallback, unsure about support*/
-        justify-content: space-between;
-      }
+    header .content {
+      display: flex;
+      align-items: end;
+      /* fallback, unsure about support*/
+      justify-content: space-between;
+    }
 
-      header h1 {
-        font-size: 7.2rem;
-        margin-bottom: 12px;
-      }
+    header h1 {
+      font-size: 7.2rem;
+      margin-bottom: 12px;
+    }
 
-      header img {
-        height: 171px;
-        max-width: 140px;
-        width: 100%;
+    header img {
+      height: 171px;
+      max-width: 140px;
+      width: 100%;
 
-        transform: scaleX(-1);
-      }
+      transform: scaleX(-1);
+    }
 
-      /* stupid hack to prevent ugly line break */
-      @media screen and (min-width: 425px) {
-        .force-line-break {
-          display: none;
-        }
-      }
-
-      /*
+    /*
         main content styles
       */
 
-      .main-content-wrapper {
-        background-color: var(--jcrew-light-blue);
-        color: white;
-      }
+    .main-content-wrapper {
+      background-color: var(--jcrew-light-blue);
+      color: var(--jcrew-light-purple);
+    }
 
-      .main-content-wrapper a {
-        color: white;
-      }
+    .main-content {
+      padding: 40px 10px;
+    }
 
-      .main-content {
-        padding: 40px 10px;
-      }
+    .main-content h2 {
+      border-bottom: 1px solid var(--jcrew-light-purple);
+      font-size: 4.8rem;
+    }
 
-      .main-content h2 {
-        border-bottom: 1px solid var(--jcrew-light-purple);
-        font-size: 4.8rem;
-      }
+    .main-content article {
+      margin: 24px 0;
+    }
 
-      .main-content article {
-        margin: 24px 0;
-      }
+    .main-content article>* {
+      padding-left: 12px;
+    }
 
-      .main-content article > * {
-        padding-left: 12px;
-      }
+    .main-content article h3,
+    h4 {
+      font-size: 2.4rem;
+      line-height: 1.2;
+    }
 
-      .main-content article h3, h4 {
-        font-size: 2.4rem;
-        line-height: 1.2;
-      }
+    .main-content article h3 {
+      font-size: 2.4rem;
+    }
 
-      .main-content article h3 {
-        font-size: 2.4rem;
-      }
+    .main-content article h4 {
+      font-size: 2rem;
+      font-style: italic;
+      margin-top: 8px;
+    }
 
-      .main-content article h4 {
-        font-size: 2rem;
-        font-style: italic;
-      }
+    .main-content article ul {
+      line-height: 1.5;
+      margin-top: 12px;
+      padding-left: 24px;
+      list-style: none;
+    }
 
-      .main-content article ul {
-        line-height: 1.5;
-        margin-top: 12px;
-        padding-left: 24px;
-        list-style: none;
-      }
+    .main-content article li {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
 
-      .main-content article li {
-        font-size: 1.6rem;
-        margin-bottom: 8px;
-      }
-
-      /*
+    /*
         footer styles
       */
 
-      footer {
-        padding: 40px 0;
-      }
+    footer {
+      background: rgb(33, 33, 33);
+      color: var(--jcrew-light-purple);
 
-      footer .content {
-        max-width: 780px;
-      }
+      padding: 40px 0;
+    }
 
-      footer p {
-        font-size: 1.6rem;
-        line-height: 1.33;
+    footer .content {
+      max-width: 780px;
+    }
 
-        margin: 16px 0;
-      }
+    footer p {
+      font-size: 1.6rem;
+      line-height: 1.33;
 
-      footer #social-media > a {
-        position: relative;
-        display: inline-block;
-        margin-right: 4px;
-      }
+      margin: 16px 0;
+    }
+  </style>
+</head>
 
-      footer #social-media > a:last-child {
-        margin: 0;
-      }
-
-      footer #social-media > a:after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <section class="content">
-        <h1>David Ryan</h1>
-        <img alt="My Face" class="lazyload" data-src="assets/face.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-      </section>
-    </header>
-    <div class="main-content-wrapper">
-      <section class="content main-content">
-        <h2>Work</h2>
-        <article>
-          <h3>Software Development <br class="force-line-break"/>Engineer III</h3>
-          <h4>Groupon, Inc</h4>
-          <ul>
-            <li>My work centers on the Deal Page team, which owns the deal details page on the main purchase flow of <a href="https://groupon.com">groupon.com</a>. I implement features and experiments, review code from team members and external contributors, resolve bugs, and work on the server &amp; client side to provide a better consumer experience. Recently, I've focused on improving latency and providing better analytical tools for developers.</li>
-            <li>My day-to-day work includes: writing Javascript on Node applications (and using Preact when it's helpful), polishing our layouts using Stylus, and ensuring that incoming code is up to our standards using Github.</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Executive Co-Chair</h3>
-          <h4>Northwestern University Dance Marathon</h4>
-          <ul>
-            <li>I spent most of my senior year at NU leading 20 other Executive Board members and over 1400 students in fundraising &amp; spreading awareness for the <a href="http://starlight.org">Starlight Children's Foundation</a> &amp; <a href="http://evanstonforever.org">Evanston Community Foundation</a>.</li>
-            <li>We raised $1.13 million for our beneficiaries, the second highest cash total in the organization's history. The money has been committed to building 11 <a href="http://starlight.org/starlightsites">Starlight Sites</a> in Chicagoland area hospitals and providing capacity building &amp; programming grants through the ECF <a href="http://evanstonforever.org/grants/responsive-grants/">Responsive Grants Program</a>.</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Other Experience</h3>
-          <ul>
-            <li>
-              <span>Developer</span> | <a href="http://dilloday.com">DilloDay.com</a>
-            </li>
-            <li>
-              <span>QA Intern</span> | Obama for America (2012)
-            </li>
-          </ul>
-        </article>
-      </section>
-    </div>
-    <footer>
-      <section class="content">
-        <p>David Ryan is a Web Developer. He really digs consumer-facing products, and is happy to work along the entire stack to see his projects through. He currently works remotely in Boston for Groupon, Inc.</p>
-        <p>David graduated from Northwestern University in 2015 with a B.A. in Computer Science, although if you ask him about it he's only going to want to talk about Dance Marathon.</p>
-        <p>David's childhood heroes include Derek Jeter, Ms. Frizzle, &amp; Dr. Alan Grant.</p>
-        <div id="social-media">
-          <a aria-label="Link to Github" href="http://www.github.com/davidmichaelryan">
-            <object class="lazyload" type="image/svg+xml" data-data="assets/github.svg">Link to Github</object>
-          </a>
-          <a aria-label="Link to Linkedin" href="http://www.linkedin.com/in/david-ryan-28a55261">
-            <object class="lazyload" type="image/svg+xml" data-data="assets/linkedin.svg">Link to Linkedin</object>
-          </a>
-        </div>
-      </section>
-    </footer>
-    <script>
-      const elementAttributeMap = {
-        img: 'src',
-        object: 'data'
-      };
-
-      window.addEventListener('load', function() {
-        document.querySelectorAll('.lazyload').forEach((element) => {
-          const attrName = elementAttributeMap[element.nodeName.toLowerCase()];
-          element.setAttribute(attrName, element.dataset[attrName]);
-        });
+<body>
+  <header>
+    <section class="content">
+      <h1>David Ryan</h1>
+      <img class="lazyload" data-src="assets/dmr_logo.png"
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    </section>
+  </header>
+  <div class="main-content-wrapper">
+    <section class="content main-content">
+      <h2>Work</h2>
+      <article>
+        <h3>Software Engineer IV</h3>
+        <h4><a href="https://farmersfridge.com">Farmer's Fridge</a></h4>
+        <ul>
+          <li>I work across the front-end, which includes the screen for our fridges and our websites, where I make big
+            decisions from the infrastructure to the build tools. This means lots of React, CSS Modules, and other
+            modern-ish tools, as well as figuring out how to integrate with our own back-end, external services with
+            Contentful, and more.</li>
+          <li>I occassionally dabble in the back-end, where I'm learning a lot about AWS Services and Python.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Software Development Engineer III</h3>
+        <h4>Groupon, Inc</h4>
+        <ul>
+          <li>My work centered on the Deal Page team, which owns the deal details page on the main purchase flow of <a
+              href="https://groupon.com">groupon.com</a>. I implemented features and experiments, reviewed code from
+            team members and external contributors, resolved bugs, and worked on the server &amp; client side to provide
+            a better consumer experience. In my latter years, I focused on improving latency and providing better
+            analytical tools for developers.</li>
+          <li>My day-to-day work included: writing Javascript on Node applications (and using Preact when it's helpful),
+            polishing our layouts using Stylus, and ensuring that incoming code is up to our standards using Github.
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h3>Executive Co-Chair</h3>
+        <h4>Northwestern University Dance Marathon</h4>
+        <ul>
+          <li>I spent most of my senior year at NU leading 20 other Executive Board members and over 1400 students in
+            fundraising &amp; spreading awareness for the <a href="http://starlight.org">Starlight Children's
+              Foundation</a> &amp; <a href="http://evanstonforever.org">Evanston Community Foundation</a>.</li>
+          <li>We raised $1.13 million for our beneficiaries, the second highest cash total in the organization's
+            history. The money has been committed to building 11 <a href="http://starlight.org/starlightsites">Starlight
+              Sites</a> in Chicagoland area hospitals and providing capacity building &amp; programming grants through
+            the ECF <a href="http://evanstonforever.org/grants/responsive-grants/">Responsive Grants Program</a>.</li>
+        </ul>
+      </article>
+    </section>
+  </div>
+  <footer>
+    <section class="content">
+      <p>David Ryan is a Web Developer. He really digs consumer-facing products, and is happy to work along the entire
+        stack to see his projects through. He currently works remotely in New Orleans for Farmer's Fridge.</p>
+      <p>David graduated from Northwestern University in 2015 with a B.A. in Computer Science, although if you ask him
+        about it he's only going to want to talk about Dance Marathon.</p>
+      <p>David's childhood heroes include Derek Jeter, Ms. Frizzle, &amp; Dr. Alan Grant.</p>
+    </section>
+  </footer>
+  <script>
+    window.addEventListener('load', function () {
+      document.querySelectorAll('img.lazyload').forEach((imgEl) => {
+        imgEl.setAttribute('src', imgEl.dataset.src);
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

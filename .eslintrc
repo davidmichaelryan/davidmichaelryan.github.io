@@ -1,3 +1,4 @@
 {
-    "extends": "groupon"
+    "extends": ["airbnb-base", "import/errors"],
+    "plugins": ["import","prettier"]
 }

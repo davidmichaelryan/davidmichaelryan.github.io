@@ -4,13 +4,19 @@
   "description": "The Re-vamped Personal Website for David Ryan",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "David Ryan",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-plugin-import": "^2.20.2"
-  }
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4"
+  },
+  "dependencies": {},
+  "type": "module"
 }
